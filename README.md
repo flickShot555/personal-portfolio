@@ -36,7 +36,7 @@ Follow these steps to set up the project locally:
 
 //bash
 //Copy code
-git clone https://github.com/muneebmoon/Portfolio.git
+git clone https://github.com/flickShot555/personal-portfolio.git
 
 
 2) Frontend Setup:
@@ -88,7 +88,9 @@ This project is open source under the MIT License. You are free to use, modify, 
 Feel free to connect with me for any queries or collaborations:
 
 Email: abbas1795khan@gmail.com
+
 LinkedIn: https://www.linkedin.com/in/abbas-khan-22386a257
+
 Portfolio: aepostrophee.kesug.com
 
 Thank you for visiting my portfolio repository! 😊
