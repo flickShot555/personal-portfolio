@@ -118,6 +118,6 @@ Email: abbas1795khan@gmail.com
 
 LinkedIn: https://www.linkedin.com/in/abbas-khan-22386a257
 
-Portfolio: aepostrophee.kesug.com
+Portfolio: www.aepostrophee.kesug.com
 
 Thank you for visiting my portfolio repository! 😊
