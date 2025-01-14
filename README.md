@@ -4,11 +4,17 @@ Welcome to the repository for my Personal Portfolio Website! This project showca
 ________________________________________________________________________________________________________________________________________________________________________________
 
 **Features:**
+
 🖥️ **Dynamic Frontend**: Crafted with React.js and JavaScript for an interactive and engaging user experience.
+
 🔗 **Backend Integration**: Powered by PHP, ensuring smooth communication between the frontend and database.
+
 🗄️ **Database Management**: Built using MySQL, hosted locally for efficient and secure data storage.
+
 🌟 **Search Engine Optimized (SEO)**: Enhanced metadata and keywords for better visibility in search results.
+
 📱 **Responsive Design**: Optimized for viewing on desktops, tablets, and mobile devices.
+
 🎨 **Custom Styling**: Clean and professional design with tailored visuals to match my personal branding.
 
 ________________________________________________________________________________________________________________________________________________________________________________
@@ -17,16 +23,23 @@ ________________________________________________________________________________
 **Project Structure**:
 
 -**Frontend**:
+
 -Framework: React.js
+
 -Styling: CSS, custom components
 
 **Backend**:
+
 Language: PHP
+
 Features: Handles form submissions, authentication, and dynamic content.
 
 **Database**:
+
 Type: MySQL
+
 Hosted: Localhost
+
 Functionality: Manages portfolio data, contact form entries, and project details.
 
 **Installation Guide**
