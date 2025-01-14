@@ -72,32 +72,46 @@ npm start
 3) Backend Setup:
 
 Ensure PHP is installed and a local server (e.g., XAMPP, WAMP) is running.
+
 Place the backend files in the server's root directory (e.g., htdocs).
 
 4) Database Configuration:
 
 Import the provided portfolio.sql file into your local MySQL server.
+
 Update the database connection settings in the config.php file:
+
 //php
 //Copy code
+
 $servername = "localhost";
+
 $username = "your_username";
+
 $password = "your_password";
+
 $dbname = "portfolio";
 
 **Usage**
+
 Access the portfolio by navigating to:
+
 Frontend: http://localhost:3000
+
 Backend: http://localhost/portfolio
+
 Update the project details, images, or contact information by modifying the database entries.
 
 **Contributions**
+
 Contributions, feedback, and suggestions are always welcome! Feel free to fork this repository and submit a pull request.
 
 **License**
+
 This project is open source under the MIT License. You are free to use, modify, and distribute it as per the license terms.
 
 **Contact**
+
 Feel free to connect with me for any queries or collaborations:
 
 Email: abbas1795khan@gmail.com
