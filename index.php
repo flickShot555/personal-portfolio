@@ -246,6 +246,65 @@
             }
         }
 
+        .skill-section {
+            padding: 50px;
+            background-color: #1a1a1a;
+        }
+
+        .skill-section h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .skill-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .skill-card {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        .skill-card svg {
+            width: 100px;
+            height: 100px;
+        }
+
+        .skill-card h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .stats div h3 {
+                font-size: 20px;
+            }
+
+            .stats div p {
+                font-size: 14px;
+            }
+
+            .skill-card h3 {
+                font-size: 16px;
+            }
+        }
+
     </style>
 </head>
 
@@ -342,6 +401,80 @@
             <div class="text">
                 <p>A software engineer, the modern-day architect of digital realms, navigates the ethereal landscapes of code, sculpting intangible structures that shape our technological world. With fingers poised over keyboards like virtuoso pianists, they compose symphonies of logic, their minds a labyrinth of algorithms and solutions. Their canvas is a screen, a vast expanse where lines of code dance in intricate patterns, weaving the fabric of programs and applications. Each keystroke is a brushstroke, crafting intricate architectures and breathing life into innovative designs. In this digital atelier, they don the mantle of problem solvers, confronting bugs and glitches like valiant knights in an ever-evolving quest for perfection. Debugging becomes a noble pursuit, unraveling the mysteries hidden within the tangled webs of code, designs. In this digital atelier.</p>
                 <a href="#" class="download-cv">Download CV</a>
+            </div>
+        </div>
+    </section>
+    <section class="skill-section">
+        <h2>Skills & Tools</h2>
+        <div class="skill-container">
+            <div class="skill-card">
+                <svg>
+                    <circle cx="50" cy="50" r="40" stroke="orange" stroke-width="4" fill="none">
+                        <animate attributeName="stroke-dasharray" from="0,251.2" to="251.2,0" dur="2s" repeatCount="indefinite" />
+                    </circle>
+                </svg>
+                <h3>Figma</h3>
+            </div>
+            <div class="skill-card">
+                <svg>
+                    <path d="M10 10 H 90 V 90 H 10 Z" stroke="blue" fill="transparent">
+                        <animate attributeName="d" values="M10 10 H 90 V 90 H 10 Z; M20 20 H 80 V 80 H 20 Z; M10 10 H 90 V 90 H 10 Z" dur="2s" repeatCount="indefinite" />
+                    </path>
+                </svg>
+                <h3>GitHub</h3>
+            </div>
+            <div class="skill-card">
+                <svg>
+                    <polygon points="50,10 10,90 90,90" fill="purple">
+                        <animate attributeName="points" dur="2s" repeatCount="indefinite"
+                            values="50,10 10,90 90,90; 50,50 10,90 90,10; 50,10 10,90 90,90" />
+                    </polygon>
+                </svg>
+                <h3>React</h3>
+            </div>
+            <div class="skill-card">
+                <svg>
+                    <rect x="20" y="20" width="60" height="60" fill="green">
+                        <animate attributeName="rx" from="0" to="30" dur="1.5s" repeatCount="indefinite" />
+                    </rect>
+                </svg>
+                <h3>VS Code</h3>
+            </div>
+            <div class="skill-card">
+                <svg>
+                    <line x1="10" y1="10" x2="90" y2="90" stroke="red" stroke-width="4">
+                        <animate attributeName="x2" from="90" to="10" dur="1s" repeatCount="indefinite" />
+                    </line>
+                </svg>
+                <h3>JetBrains</h3>
+            </div>
+            <div class="skill-card">
+                <svg>
+                    <ellipse cx="50" cy="50" rx="40" ry="20" fill="yellow">
+                        <animate attributeName="rx" from="40" to="10" dur="1.5s" repeatCount="indefinite" />
+                    </ellipse>
+                </svg>
+                <h3>Postman</h3>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio" id="Portfolio">
+        <h2>Portfolio</h2>
+        <hr>
+        <br>
+        <p>Here are some of my recent projects that i have done for my clients. I have worked on multiple projects and have a vast experience in this field.</p>
+        <div class="portfolio-cards">
+            <div class="portfolio-card">
+                <img src="./assets/project1.jpg" alt="Project 1" style="width: 100%; border-radius: 10px;">
+            </div>
+            <div class="portfolio-card">
+                <img src="./assets/project2.jpg" alt="Project 2" style="width: 100%; border-radius: 10px;">
+            </div>
+            <div class="portfolio-card">
+                <img src="./assets/project3.jpg" alt="Project 3" style="width: 100%; border-radius: 10px;">
+            </div>
+            <div class="portfolio-card">
+                <img src="./assets/project4.jpg" alt="Project 4" style="width: 100%; border-radius: 10px;">
             </div>
         </div>
     </section>
