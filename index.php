@@ -320,7 +320,7 @@
                 <li><a href="#Contactme">Contact me</a></li>
             </ul>
         </nav>
-        <a href="#" class="hire-me-btn"><p style="padding-left:20px;padding-right:20px;font-size:18px;">Hire Me</p></a>
+        <a href="https://www.linkedin.com/in/the-abbas-khan/" target="_blank" class="hire-me-btn"><p style="padding-left:20px;padding-right:20px;font-size:18px;">Hire Me</p></a>
     </header>
 
     <section class="hero">
@@ -329,7 +329,7 @@
             <p>Hello, this is</p>
             <h1>Abbas Khan<br>Software Engineer</h1>
             <div class="buttons">
-                <a href="#" class="btn-primary">Hire Me</a>
+                <a href="https://www.linkedin.com/in/the-abbas-khan/" target="_blank" class="btn-primary">Hire Me</a>
                 <a href="#" class="btn-secondary">Download CV</a>
             </div>
         </div>
@@ -458,7 +458,7 @@
             </div>
         </div>
     </section>
-    <section class="portfolio" id="Portfolio">
+    <!--section class="portfolio" id="Portfolio">
         <h2>Portfolio</h2>
         <hr>
         <br>
@@ -477,7 +477,7 @@
                 <img src="./assets/project4.jpg" alt="Project 4" style="width: 100%; border-radius: 10px;">
             </div>
         </div>
-    </section>
+    </section-->
 </body>
 
 </html>
