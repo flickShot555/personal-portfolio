@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <title>UI/UX Designer Portfolio</title>
+    <title>The Abbas Khan</title>
+    <script src="https://kit.fontawesome.com/6e98f21a5d.js" crossorigin="anonymous"></script>
     <style>
         /* Basic Reset */
         * {
@@ -23,11 +24,28 @@
 
         header {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 40px 50px;
             background-color: #1a1a1a;
         }
+        
+        header nav {
+            background-color: #333;
+            border: 2px solid #ff4500;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        /**
+            @media (max-width: 768px) {
+                header nav{
+    
+                }
+            }
+        */
 
         .logo {
             font-size: 30px;
@@ -35,26 +53,63 @@
             font-weight: bold;
         }
 
-        nav ul {
-            display: flex;
-            list-style: none;
+
+        nav .nav-item {
+            color: #fff;
+            font-style: normal; /* Changed 'none' to 'normal' for clarity */
+            margin: 0 15px;
+            padding: 10px; /* Padding for better spacing */
+            box-sizing: border-box; /* Ensures padding doesn't affect total size */
+            position: relative; /* Required for relative positioning */
+            transition: all 0.3s ease; /* Smooth transitions for hover effects */
+            display: flex; /* Added to align content properly */
+            align-items: center; /* Centers icon and text vertically */
+            justify-content: center; /* Centers content horizontally */
+
         }
 
-        nav ul li {
-            margin: 0 15px;
-            padding-left:10px;
-            padding-right:10px;
+        nav .nav-item:hover {
+            background-color: #ff5800; /* Highlight background on hover */
+            font-weight: bold;
+            transform: scale(1.1); /* Slight scaling effect */
+            transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+        }
+
+        
+
+        nav .nav-item span {
+            display: inline-block; /* Ensures proper inline layout */
+            margin-left: 5px; /* Adds spacing between icon and text */
+
+        }
+
+        nav .nav-item i {
+            display: none;
+            /**font-size: 1.2rem; /* Adjust icon size for better visibility */
+            width: auto;*/
+
         }
         
-        nav ul li :hover{
-            color: #ff5800;
-        }
 
-        nav ul li a {
-            size:25;
-            text-decoration: none;
-            color: #fff;
-            font-weight: 500;
+        @media (max-width: 768px) {
+            nav .nav-item {
+                padding: 5px; /* Reduce padding on smaller screens */
+                justify-content: center; /* Center content */
+            }
+
+            nav .nav-item span {
+                display: none; /* Hide text on smaller screens */
+            }
+
+            nav .nav-item i {
+                font-size: 1.5rem; /* Increase icon size for better visibility */
+                display: inline-block; /* Ensure icons remain visible */
+                transition: transform 0.3s ease, font-size 0.3s ease; /* Smooth hover effect */
+            }
+        }
+        
+        nav .nav-item:hover i {
+        transform: scale(1.2); /* Slight scaling effect on hover */
         }
 
         .hire-me-btn {
@@ -68,17 +123,40 @@
 
         .hero {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-around;
             padding: 20px;
         }
+
+        .hero .container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 20px;
+            gap:30vw;
+        }
+
+        @media (max-width: 768px){
+            .hero{
+                flex-direction: column;
+            }
+
+            .hero .container{
+                flex-direction: column;
+            }
+
+            .hero .container .content{
+                order: 2;
+            }
+        }        
 
         .hero .content {
             max-width: 100%;
         }
 
         .hero h1 {
-            font-size: 48px;
+            font-size: 3rem;
             margin-bottom: 20px;
             color: #ff4500;
         }
@@ -110,11 +188,11 @@
         .hero .stats {
             display: flex;
             justify-content: center;
-            margin-top: 100px;
+            margin-top: 50px;
             background-color: #333;
             padding-left: 40px;
             padding-right: 40px;
-            
+            clear:both;
             border-radius: 10px;
             float:left;
         }
@@ -136,6 +214,7 @@
         .services {
             padding: 50px;
             text-align: center;
+            
         }
 
         .services h2 {
@@ -205,18 +284,17 @@
             align-items: center;
             justify-content: center;
             text-align: left;
-            padding-left: 80px;
-            padding-right:80px;
+            padding:5%;
         }
 
         .about-content .image {
             flex: 1;
-            max-width: 300px;
+            max-width: 400px;
             margin: 20px;
         }
 
         .about-content .text {
-            font-size:20px;
+            font-size:18px;
             flex: 2;
             margin: 20px;
             padding-left:30px;
@@ -225,7 +303,7 @@
 
         .about-content .text p {
             color: #aaa;
-            font-size:30px;
+            font-size:18px;
         }
 
         .download-cv {
@@ -243,6 +321,18 @@
             .about-content {
                 flex-direction: column;
                 text-align: center;
+            }
+            .about-content .text {
+            font-size:18px;
+            flex: 2;
+            margin: 20px;
+            padding-left:10px;
+            padding-right:10px;
+            }
+
+            .about-content .text p {
+            color: #aaa;
+            font-size:18px;
             }
         }
 
@@ -265,22 +355,51 @@
             justify-items: center;
         }
 
-        .skill-card {
-            background-color: #222;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
+        .skill {
             position: relative;
+            width: 120px;
+            height: 120px;
+        }
+    
+        .skill svg {
+          position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(-90deg);
+        }
+        
+        .skill circle {
+            fill: none;
+            stroke-width: 10;
         }
 
-        .skill-card svg {
-            width: 100px;
-            height: 100px;
+        .skill .bg {
+            stroke: #333;
         }
 
-        .skill-card h3 {
-            margin-top: 10px;
-            font-size: 18px;
+        .skill .progress {
+            stroke: orange;
+            stroke-linecap: round;
+            stroke-dasharray: 377; /* Circumference = 2 * π * r (r = 60px) */
+            stroke-dashoffset: 377; /* Initial full circle */
+            transition: stroke-dashoffset 1s ease;
+        }
+
+        .skill .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+        }
+
+        .skill .label {
+            position: absolute;
+            bottom: -30px;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
         }
 
         @media (max-width: 768px) {
@@ -306,25 +425,67 @@
         }
 
     </style>
+    <script>
+        document.querySelectorAll(".skill").forEach((skill) => {
+            const percent = skill.getAttribute("data-percent");
+            const progressCircle = skill.querySelector(".progress");
+            const circumference = 2 * Math.PI * 60; // Circumference of the circle
+            const offset = circumference - (percent / 100) * circumference;
+        progressCircle.style.strokeDashoffset = offset;
+        });
+
+        /*const navbarItems = document.querySelectorAll("nav .nav-item");
+
+        function updateNavbar() {
+            const isSmallScreen = window.innerWidth <= 768;
+
+            navbarItems.forEach((item) => {
+                const span = item.querySelector("span");
+                const text = item.getAttribute("data-text");
+
+                if (isSmallScreen) {
+                  span.textContent = ""; // Hide text
+                } else {
+                span.textContent = text; // Show text
+                }
+            });
+        }
+
+        // Run on resize and initial load
+        window.addEventListener("resize", updateNavbar);
+        updateNavbar();*/
+    </script>
 </head>
 
 <body>
     <header>
-        <div class="logo">LOGO</div>
         <nav>
-            <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#Services">Services</a></li>
-                <li><a href="#Aboutme">About me</a></li>
-                <li><a href="#Portfolio">Portfolio</a></li>
-                <li><a href="#Contactme">Contact me</a></li>
-            </ul>
+            <a href="#home" class="nav-item">
+                <i class="fa-solid fa-house fa-xl" style="color: #ffffff;"></i>
+                <span>Home</span>
+            </a>
+            <a href="#services" class="nav-item">
+                <i class="fa-solid fa-laptop-code fa-xl" style="color: #ffffff;"></i>
+                <span>Serv  ices</span>
+            </a>
+            <a href="#about" class="nav-item">
+                <i class="fa-solid fa-user fa-xl" style="color: #ffffff;"></i>
+                <span>About Me</span>
+            </a>
+            <a href="#portfolio" class="nav-item">
+                <i class="fa-solid fa-briefcase fa-xl" style="color: #ffffff;"></i>
+                <span>Portfolio</span>
+            </a>
+            <a href="#contact" class="nav-item">
+                <i class="fa-solid fa-envelope fa-xl" style="color: #ffffff;"></i>
+                <span>Contact Me</span>
+            </a>
         </nav>
-        <a href="https://www.linkedin.com/in/the-abbas-khan/" target="_blank" class="hire-me-btn"><p style="padding-left:20px;padding-right:20px;font-size:18px;">Hire Me</p></a>
+
     </header>
 
-    <section class="hero">
-        <div style="display:flex;flex-direction:column">
+    <section class="hero" id="home">
+        <div class="container">
         <div class="content">
             <p>Hello, this is</p>
             <h1>Abbas Khan<br>Software Engineer</h1>
@@ -332,6 +493,10 @@
                 <a href="https://www.linkedin.com/in/the-abbas-khan/" target="_blank" class="btn-primary">Hire Me</a>
                 <a href="#" class="btn-secondary">Download CV</a>
             </div>
+        </div>
+        <div class="image">
+            <img src="./assets/pp6.png" alt="Abbas Khan" style="border-radius: 5%; max-width: 400px;">
+        </div>
         </div>
         <div class="stats">
         <div>
@@ -346,12 +511,9 @@
             <h3>3</h3>
             <p>Happy Clients</p>
         </div>
-        </div></div>
-        <div class="image">
-            <img src="./assets/dp.jpg" alt="Abbas Khan" style="border-radius: 5%; max-width: 300px;">
         </div>
     </section>
-    <section class="services" id="Services">
+    <section class="services" id="services">
         <h2>Services</h2>
         <hr>
         <br>
@@ -393,10 +555,10 @@
         </div>
     </section>
     <section class="about" id="Aboutme">
-        <h2>About Me<br><hr><br></h2>
+        <h2>About Me<br><hr></h2>
         <div class="about-content">
             <div class="image">
-                <img src="./assets/dp.jpg" alt="Abbas Khan" style="width: 100%; border-radius: 10px;">
+                <img src="./assets/pp6.png" alt="Abbas Khan" style="width: 100%; border-radius: 10px;">
             </div>
             <div class="text">
                 <p>A software engineer, the modern-day architect of digital realms, navigates the ethereal landscapes of code, sculpting intangible structures that shape our technological world. With fingers poised over keyboards like virtuoso pianists, they compose symphonies of logic, their minds a labyrinth of algorithms and solutions. Their canvas is a screen, a vast expanse where lines of code dance in intricate patterns, weaving the fabric of programs and applications. Each keystroke is a brushstroke, crafting intricate architectures and breathing life into innovative designs. In this digital atelier, they don the mantle of problem solvers, confronting bugs and glitches like valiant knights in an ever-evolving quest for perfection. Debugging becomes a noble pursuit, unraveling the mysteries hidden within the tangled webs of code, designs. In this digital atelier.</p>
@@ -406,13 +568,10 @@
     </section>
     <section class="skill-section">
         <h2>Skills & Tools</h2>
-        <div class="skill-container">
+        <!--div class="skill-container">
+
             <div class="skill-card">
-                <svg>
-                    <circle cx="50" cy="50" r="40" stroke="orange" stroke-width="4" fill="none">
-                        <animate attributeName="stroke-dasharray" from="0,251.2" to="251.2,0" dur="2s" repeatCount="indefinite" />
-                    </circle>
-                </svg>
+                <i class="fa-brands fa-figma fa-2xl" style="color: #0a0a0a;"></i>
                 <h3>Figma</h3>
             </div>
             <div class="skill-card">
@@ -456,6 +615,25 @@
                 </svg>
                 <h3>Postman</h3>
             </div>
+        </div-->
+        <div class="skill-container">
+            <div class="skill" data-percent="100">
+                <svg width="120" height="120">
+                    <circle class="bg" cx="60" cy="60" r="60"></circle>
+                    <circle class="progress" cx="60" cy="60" r="60"></circle>
+                </svg>
+                 <i class="fa-brands fa-figma icon"></i>
+                <div class="label">100%</div>
+            </div>
+            <div class="skill" data-percent="85">
+                <svg width="120" height="120">
+                <circle class="bg" cx="60" cy="60" r="60"></circle>
+                <circle class="progress" cx="60" cy="60" r="60"></circle>
+            </svg>
+            <i class="fa-brands fa-adobe icon"></i>
+            <div class="label">85%</div>
+            </div>
+            <!-- Add more skill indicators as needed -->
         </div>
     </section>
     <!--section class="portfolio" id="Portfolio">
