@@ -561,7 +561,13 @@
                 <img src="./assets/pp6.png" alt="Abbas Khan" style="width: 100%; border-radius: 10px;">
             </div>
             <div class="text">
-                <p>A software engineer, the modern-day architect of digital realms, navigates the ethereal landscapes of code, sculpting intangible structures that shape our technological world. With fingers poised over keyboards like virtuoso pianists, they compose symphonies of logic, their minds a labyrinth of algorithms and solutions. Their canvas is a screen, a vast expanse where lines of code dance in intricate patterns, weaving the fabric of programs and applications. Each keystroke is a brushstroke, crafting intricate architectures and breathing life into innovative designs. In this digital atelier, they don the mantle of problem solvers, confronting bugs and glitches like valiant knights in an ever-evolving quest for perfection. Debugging becomes a noble pursuit, unraveling the mysteries hidden within the tangled webs of code, designs. In this digital atelier.</p>
+                <p>I am a dedicated software developer with a strong background in building innovative, scalable solutions. 
+                    With expertise in various programming languages and frameworks, I excel at creating efficient applications 
+                    that address diverse industry challenges.
+
+                    My experience includes managing cross-functional teams, ensuring project delivery on time and within budget, 
+                    and staying updated on emerging technologies. I am passionate about leveraging technology to drive impactful 
+                    solutions and eager to collaborate with professionals on innovative opportunities.</p>
                 <a href="#" class="download-cv">Download CV</a>
             </div>
         </div>
