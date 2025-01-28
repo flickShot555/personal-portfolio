@@ -39,21 +39,6 @@
             flex-direction: row;
         }
 
-        /**
-            @media (max-width: 768px) {
-                header nav{
-    
-                }
-            }
-        */
-
-        .logo {
-            font-size: 30px;
-            color: #ff4500;
-            font-weight: bold;
-        }
-
-
         nav .nav-item {
             color: #fff;
             font-style: normal; /* Changed 'none' to 'normal' for clarity */
@@ -90,35 +75,8 @@
 
         }
         
-
-        @media (max-width: 768px) {
-            nav .nav-item {
-                padding: 5px; /* Reduce padding on smaller screens */
-                justify-content: center; /* Center content */
-            }
-
-            nav .nav-item span {
-                display: none; /* Hide text on smaller screens */
-            }
-
-            nav .nav-item i {
-                font-size: 1.5rem; /* Increase icon size for better visibility */
-                display: inline-block; /* Ensure icons remain visible */
-                transition: transform 0.3s ease, font-size 0.3s ease; /* Smooth hover effect */
-            }
-        }
-        
         nav .nav-item:hover i {
-        transform: scale(1.2); /* Slight scaling effect on hover */
-        }
-
-        .hire-me-btn {
-            padding: 10px 20px;
-            background-color: #ff5800;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
+            transform: scale(1.2); /* Slight scaling effect on hover */
         }
 
         .hero {
@@ -137,22 +95,16 @@
             gap:30vw;
         }
 
-        @media (max-width: 768px){
-            .hero{
-                flex-direction: column;
-            }
-
-            .hero .container{
-                flex-direction: column;
-            }
-
-            .hero .container .content{
-                order: 2;
-            }
-        }        
 
         .hero .content {
             max-width: 100%;
+            padding:2%;
+        }
+
+        
+        .hero p {
+            margin-bottom: 20px;
+            font-size: 18px;
         }
 
         .hero h1 {
@@ -161,9 +113,12 @@
             color: #ff4500;
         }
 
-        .hero p {
-            margin-bottom: 20px;
-            font-size: 18px;
+
+        .hero .buttons{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .hero .buttons a {
@@ -173,6 +128,7 @@
             margin-right: 15px;
             font-weight: bold;
         }
+
 
         .btn-primary {
             background-color: #ff4800;
@@ -317,25 +273,6 @@
             font-weight: bold;
         }
 
-        @media (max-width: 768px) {
-            .about-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            .about-content .text {
-            font-size:18px;
-            flex: 2;
-            margin: 20px;
-            padding-left:10px;
-            padding-right:10px;
-            }
-
-            .about-content .text p {
-            color: #aaa;
-            font-size:18px;
-            }
-        }
-
         .skill-section {
             padding: 50px;
             background-color: #1a1a1a;
@@ -349,40 +286,37 @@
         }
 
         .skill-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            justify-items: center;
+            display: flex;
+            flex-wrap:wrap;
+            gap: 5%;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a;
+            padding: 20px;
         }
 
         .skill {
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
             position: relative;
-            width: 120px;
-            height: 120px;
+            padding:1%;
         }
-    
+
+        .icon-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .skill svg {
-          position: absolute;
-            top: 0;
-            left: 0;
-            transform: rotate(-90deg);
-        }
-        
-        .skill circle {
-            fill: none;
-            stroke-width: 10;
-        }
-
-        .skill .bg {
-            stroke: #333;
-        }
-
-        .skill .progress {
-            stroke: orange;
-            stroke-linecap: round;
-            stroke-dasharray: 377; /* Circumference = 2 * π * r (r = 60px) */
-            stroke-dashoffset: 377; /* Initial full circle */
-            transition: stroke-dashoffset 1s ease;
+            position: relative;
+            width: 140px;
+            height: 140px;
+            transform: rotate(90deg);
         }
 
         .skill .icon {
@@ -390,25 +324,92 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 30px;
+            font-size: 40px;
+            color: #888; /* Adjust this value for the desired icon color */
+        }
+        
+        .skill p {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #aaa;
         }
 
-        .skill .label {
-            position: absolute;
-            bottom: -30px;
-            width: 100%;
-            text-align: center;
-            font-size: 16px;
+        .skill r {
+            margin-top: 5px;
+            font-size: 14px;
             font-weight: bold;
+            color: #ff4800;
+        }
+
+        .circle-bg {
+            fill: none;
+            stroke: #333;
+            stroke-width: 3.8;
+        }
+
+        .circle {
+            fill: none;
+            stroke: #ff4500;
+            stroke-width: 3.8;
+            stroke-linecap: round;
+            transform: rotate(-90deg);
+            transform-origin: center;
+            transition: stroke-dasharray 0.3s ease;
         }
 
         @media (max-width: 768px) {
+            nav .nav-item {
+                padding: 5px; /* Reduce padding on smaller screens */
+                justify-content: center; /* Center content */
+            }
+
+            nav .nav-item span {
+                display: none; /* Hide text on smaller screens */
+            }
+
+            nav .nav-item i {
+                font-size: 1.5rem; /* Increase icon size for better visibility */
+                display: inline-block; /* Ensure icons remain visible */
+                transition: transform 0.3s ease, font-size 0.3s ease; /* Smooth hover effect */
+            }
+
+            .hero {
+                flex-direction: column;
+            }
+
+
             .hero h1 {
                 font-size: 32px;
             }
 
             .hero p {
                 font-size: 16px;
+            }
+
+            .hero .container{
+                flex-direction: column;
+            }
+
+            .hero .container .content{
+                order: 2;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .about-content .text {
+            font-size:18px;
+            flex: 2;
+            margin: 20px;
+            padding-left:10px;
+            padding-right:10px;
+            }
+
+            .about-content .text p {
+            color: #aaa;
+            font-size:18px;
             }
 
             .stats div h3 {
@@ -429,32 +430,16 @@
         document.querySelectorAll(".skill").forEach((skill) => {
             const percent = skill.getAttribute("data-percent");
             const progressCircle = skill.querySelector(".progress");
-            const circumference = 2 * Math.PI * 60; // Circumference of the circle
-            const offset = circumference - (percent / 100) * circumference;
-        progressCircle.style.strokeDashoffset = offset;
+            const radius = 60; // Radius of the circle
+            const circumference = 2 * Math.PI * radius; // Circumference of the circle
+            const offset = circumference - (percent / 100) * circumference; // Calculate offset
+
+            // Set the progress circle's stroke-dasharray and stroke-dashoffset
+            progressCircle.style.strokeDasharray = circumference;
+            progressCircle.style.strokeDashoffset = offset;
         });
-
-        /*const navbarItems = document.querySelectorAll("nav .nav-item");
-
-        function updateNavbar() {
-            const isSmallScreen = window.innerWidth <= 768;
-
-            navbarItems.forEach((item) => {
-                const span = item.querySelector("span");
-                const text = item.getAttribute("data-text");
-
-                if (isSmallScreen) {
-                  span.textContent = ""; // Hide text
-                } else {
-                span.textContent = text; // Show text
-                }
-            });
-        }
-
-        // Run on resize and initial load
-        window.addEventListener("resize", updateNavbar);
-        updateNavbar();*/
     </script>
+
 </head>
 
 <body>
@@ -483,6 +468,9 @@
         </nav>
 
     </header>
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 
     <section class="hero" id="home">
         <div class="container">
@@ -513,6 +501,10 @@
         </div>
         </div>
     </section>
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
     <section class="services" id="services">
         <h2>Services</h2>
         <hr>
@@ -554,6 +546,10 @@
             </div>
         </div>
     </section>
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
     <section class="about" id="Aboutme">
         <h2>About Me<br><hr></h2>
         <div class="about-content">
@@ -568,100 +564,180 @@
                     My experience includes managing cross-functional teams, ensuring project delivery on time and within budget, 
                     and staying updated on emerging technologies. I am passionate about leveraging technology to drive impactful 
                     solutions and eager to collaborate with professionals on innovative opportunities.</p>
-                <a href="#" class="download-cv">Download CV</a>
+                <a href="./assets/web dev resume.pdf" class="download-cv" download="Abbas_Khan's_Resume">Download CV</a>
             </div>
         </div>
     </section>
-    <section class="skill-section">
-        <h2>Skills & Tools</h2>
-        <!--div class="skill-container">
 
-            <div class="skill-card">
-                <i class="fa-brands fa-figma fa-2xl" style="color: #0a0a0a;"></i>
-                <h3>Figma</h3>
-            </div>
-            <div class="skill-card">
-                <svg>
-                    <path d="M10 10 H 90 V 90 H 10 Z" stroke="blue" fill="transparent">
-                        <animate attributeName="d" values="M10 10 H 90 V 90 H 10 Z; M20 20 H 80 V 80 H 20 Z; M10 10 H 90 V 90 H 10 Z" dur="2s" repeatCount="indefinite" />
-                    </path>
-                </svg>
-                <h3>GitHub</h3>
-            </div>
-            <div class="skill-card">
-                <svg>
-                    <polygon points="50,10 10,90 90,90" fill="purple">
-                        <animate attributeName="points" dur="2s" repeatCount="indefinite"
-                            values="50,10 10,90 90,90; 50,50 10,90 90,10; 50,10 10,90 90,90" />
-                    </polygon>
-                </svg>
-                <h3>React</h3>
-            </div>
-            <div class="skill-card">
-                <svg>
-                    <rect x="20" y="20" width="60" height="60" fill="green">
-                        <animate attributeName="rx" from="0" to="30" dur="1.5s" repeatCount="indefinite" />
-                    </rect>
-                </svg>
-                <h3>VS Code</h3>
-            </div>
-            <div class="skill-card">
-                <svg>
-                    <line x1="10" y1="10" x2="90" y2="90" stroke="red" stroke-width="4">
-                        <animate attributeName="x2" from="90" to="10" dur="1s" repeatCount="indefinite" />
-                    </line>
-                </svg>
-                <h3>JetBrains</h3>
-            </div>
-            <div class="skill-card">
-                <svg>
-                    <ellipse cx="50" cy="50" rx="40" ry="20" fill="yellow">
-                        <animate attributeName="rx" from="40" to="10" dur="1.5s" repeatCount="indefinite" />
-                    </ellipse>
-                </svg>
-                <h3>Postman</h3>
-            </div>
-        </div-->
-        <div class="skill-container">
-            <div class="skill" data-percent="100">
-                <svg width="120" height="120">
-                    <circle class="bg" cx="60" cy="60" r="60"></circle>
-                    <circle class="progress" cx="60" cy="60" r="60"></circle>
-                </svg>
-                 <i class="fa-brands fa-figma icon"></i>
-                <div class="label">100%</div>
-            </div>
-            <div class="skill" data-percent="85">
-                <svg width="120" height="120">
-                <circle class="bg" cx="60" cy="60" r="60"></circle>
-                <circle class="progress" cx="60" cy="60" r="60"></circle>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <section class="skill-section">
+    <h2>Skills & Tools</h2>
+    <div class="skill-container">
+        <!-- Figma -->
+        <div class="skill">
+            <div class="icon-container">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+                <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
             </svg>
-            <i class="fa-brands fa-adobe icon"></i>
-            <div class="label">85%</div>
+            <i class="fab fa-figma icon"></i>
             </div>
-            <!-- Add more skill indicators as needed -->
+            <p>100%<br><r>Figma</r></p>
         </div>
+
+        <!-- Postman -->
+        <div class="skill">
+            <div class="icon-container">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+                <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+            </svg>
+            <i class="fa-solid fa-user-astronaut icon"></i>
+            </div>
+            <p>100%<br><r>Postman</r></p>
+        </div>
+
+
+        <!-- Databases -->
+        <div class="skill">
+            <div class="icon-container">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+                <path class="circle" stroke-dasharray="90, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+            </svg>
+            <i class="fa-solid fa-database icon"></i>
+            </div>
+            <p>90%<br><r>Databases</r></p>
+        </div>
+
+        <!-- Github -->
+        <div class="skill">
+            <div class="icon-container">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+                <path class="circle" stroke-dasharray="85, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+            </svg>
+            <i class="fab fa-github icon"></i>
+            </div>
+            <p>85%<br><r>Github</r></p>
+        </div>
+
+        <!-- react -->
+        <div class="skill">
+            <div class="icon-container">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+                <path class="circle" stroke-dasharray="80, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+            </svg>
+            <i class="fab fa-react icon"></i>
+            </div>
+            <p>80%<br><r>React</r></p>
+        </div>
+        
+        <!-- Firebase -->
+        <div class="skill">
+            <div class="icon-container">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+                <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+            </svg>
+            <i class="fa-solid fa-fire icon"></i>
+            </div>  
+            <p>75%<br><r>Firebase</r></p>
+        </div>
+        
+        <!-- laravel -->
+        <div class="skill">
+            <div class="icon-container">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+                <path class="circle" stroke-dasharray="50, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+            </svg>
+            <i class="fa-brands fa-laravel icon"></i>
+            </div>
+            <p>50%<br><r>Laravel</r></p>
+        </div>
+
+        <!-- html -->
+        <div class="skill">
+            <div class="icon-container">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+                <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+            </svg>
+            <i class="fa-brands fa-html5 icon"></i>
+            </div>  
+            <p>100%<br><r>HTML</r></p>
+        </div>
+
+        <!-- php -->
+        <div class="skill">
+            <div class="icon-container">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+                <path class="circle" stroke-dasharray="90, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+            </svg>
+            <i class="fa-brands fa-php icon"></i>
+            </div>
+            <p>90%<br><r>Php</r></p>
+        </div>
+        
+        <!-- BootStrap -->
+        <div class="skill">
+            <div class="icon-container">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+                <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+            </svg>
+            <i class="fa-brands fa-bootstrap icon"></i>
+            </div>
+            <p>75%<br><r>BootStrap</r></p>
+        </div>
+
+        <!-- Java -->
+        <div class="skill">
+            <div class="icon-container">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+                <path class="circle" stroke-dasharray="70, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+            </svg>
+            <i class="fa-brands fa-java icon"></i>
+            </div>  
+            <p>70%<br><r>Java</r></p>
+        </div>  
+        
+        <!-- JavaScript -->
+        <div class="skill">
+            <div class="icon-container">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+                <path class="circle" stroke-dasharray="65, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+            </svg>
+            <i class="fa-brands fa-js icon"></i>
+            </div>  
+            <p>65%<br><r>JavaScript</r></p>
+        </div> 
+        
+        <!-- Python -->
+        <div class="skill">
+            <div class="icon-container">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+                <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 0 0 31.831 a 15.9155 15.9155 0 1 0 0 -31.831" />
+            </svg>
+            <i class="fa-brands fa-python icon"></i>
+            </div>  
+            <p>60%<br><r>Python</r></p>
+        </div> 
+
+    </div>
+        
     </section>
-    <!--section class="portfolio" id="Portfolio">
-        <h2>Portfolio</h2>
-        <hr>
-        <br>
-        <p>Here are some of my recent projects that i have done for my clients. I have worked on multiple projects and have a vast experience in this field.</p>
-        <div class="portfolio-cards">
-            <div class="portfolio-card">
-                <img src="./assets/project1.jpg" alt="Project 1" style="width: 100%; border-radius: 10px;">
-            </div>
-            <div class="portfolio-card">
-                <img src="./assets/project2.jpg" alt="Project 2" style="width: 100%; border-radius: 10px;">
-            </div>
-            <div class="portfolio-card">
-                <img src="./assets/project3.jpg" alt="Project 3" style="width: 100%; border-radius: 10px;">
-            </div>
-            <div class="portfolio-card">
-                <img src="./assets/project4.jpg" alt="Project 4" style="width: 100%; border-radius: 10px;">
-            </div>
-        </div>
-    </section-->
+
+
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
 </body>
 
 </html>
