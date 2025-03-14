@@ -108,6 +108,7 @@
         }
 
         .hero h1 {
+            max-width:100%;
             font-size: 3rem;
             margin-bottom: 20px;
             color: #ff4500;
@@ -426,6 +427,9 @@
         }
 
     </style>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
     <script>
         document.querySelectorAll(".skill").forEach((skill) => {
             const percent = skill.getAttribute("data-percent");
@@ -451,9 +455,9 @@
             </a>
             <a href="#services" class="nav-item">
                 <i class="fa-solid fa-laptop-code fa-xl" style="color: #ffffff;"></i>
-                <span>Serv  ices</span>
+                <span>Services</span>
             </a>
-            <a href="#about" class="nav-item">
+            <a href="#Aboutme" class="nav-item">
                 <i class="fa-solid fa-user fa-xl" style="color: #ffffff;"></i>
                 <span>About Me</span>
             </a>
@@ -469,22 +473,21 @@
 
     </header>
 
-<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
     <section class="hero" id="home">
         <div class="container">
-        <div class="content">
-            <p>Hello, this is</p>
-            <h1>Abbas Khan<br>Software Engineer</h1>
-            <div class="buttons">
-                <a href="https://www.linkedin.com/in/the-abbas-khan/" target="_blank" class="btn-primary">Hire Me</a>
-                <a href="#" class="btn-secondary">Download CV</a>
+            <div class="content">
+                <p>Hello, this is</p>
+                <h1>Abbas Khan<br>Software Engineer</h1>
+                <div class="buttons">
+                    <a href="https://www.linkedin.com/in/the-abbas-khan/" target="_blank" class="btn-primary">Hire Me</a>
+                    <a href="./assets/web_dev_resume.pdf" class="btn-secondary">Download CV</a>
+                </div>
             </div>
-        </div>
-        <div class="image">
-            <img src="./assets/pp6.png" alt="Abbas Khan" style="border-radius: 5%; max-width: 400px;">
-        </div>
+            <div class="image">
+                <img src="./assets/pp6.jpg" alt="Abbas Khan" style="border-radius: 5%; max-width: 400px;">
+            </div>
         </div>
         <div class="stats">
         <div>
@@ -502,8 +505,7 @@
         </div>
     </section>
 
-<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
     <section class="services" id="services">
         <h2>Services</h2>
@@ -547,14 +549,13 @@
         </div>
     </section>
 
-<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
     <section class="about" id="Aboutme">
         <h2>About Me<br><hr></h2>
         <div class="about-content">
             <div class="image">
-                <img src="./assets/pp6.png" alt="Abbas Khan" style="width: 100%; border-radius: 10px;">
+                <img src="./assets/pp6.jpg" alt="Abbas Khan" style="width: 100%; border-radius: 10px;">
             </div>
             <div class="text">
                 <p>I am a dedicated software developer with a strong background in building innovative, scalable solutions. 
@@ -564,12 +565,12 @@
                     My experience includes managing cross-functional teams, ensuring project delivery on time and within budget, 
                     and staying updated on emerging technologies. I am passionate about leveraging technology to drive impactful 
                     solutions and eager to collaborate with professionals on innovative opportunities.</p>
-                <a href="./assets/web dev resume.pdf" class="download-cv" download="Abbas_Khan's_Resume">Download CV</a>
+                <a href="./assets/web_dev_resume.pdf" class="download-cv" download="Abbas_Khan's_Resume">Download CV</a>
             </div>
         </div>
     </section>
 
-<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
     <section class="skill-section">
     <h2>Skills & Tools</h2>
@@ -735,9 +736,6 @@
         
     </section>
 
-
-
-<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
 </body>
 
 </html>
