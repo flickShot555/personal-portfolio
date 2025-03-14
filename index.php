@@ -736,6 +736,52 @@
         
     </section>
 
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <section class="portfolio" id="portfolio">
+        <div class="portflio-cards">
+            <!--><div class="portflio-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile UI/UX Design</h3>
+                <p>Create intuitive and visually engaging interfaces for mobile applications, ensuring seamless navigation and an enhanced user experience.</p>
+            </div>
+            <div class="portflio-card">
+                <i class="fas fa-drafting-compass"></i>
+                <h3>Wireframing and Prototyping</h3>
+                <p>Transform ideas into interactive prototypes and wireframes, bringing clarity and functionality to your concepts</p>
+            </div>
+            <div class="portflio-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web App Design</h3>
+                <p>Design responsive web applications optimized for desktop and mobile platforms, focusing on speed and user-centric design.</p>
+            </div>
+            <div class="portflio-card">
+                <i class="fas fa-palette"></i>
+                <h3>Brand Identity Design</h3>
+                <p>Develop cohesive and unique visual identities, including logos, typography, and color schemes, to define your brand's voice.</p>
+            </div>
+            <div class="portflio-card">
+                <i class="fas fa-search"></i>
+                <h3>User Research and Testing</h3>
+                <p>Conduct thorough user research and usability testing to deliver designs that resonate with your target audience.</p>
+            </div>
+            <div class="portflio-card">
+                <i class="fas fa-play"></i>
+                <h3>Motion and Interaction Design</h3>
+                <p>Add life to your applications with animations and interactive elements that delight and engage users.</p>
+            </div>
+            <-->
+            <div class="web-cards">
+                
+            </div>
+            <div class="mobile-cards">
+
+            </div>
+            <div class="desktop-cards">
+
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
