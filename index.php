@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!--link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"-->
     <title>The Abbas Khan</title>
+    <!--link rel="stylesheet" href="css/styles.css"-->
     <script src="https://kit.fontawesome.com/6e98f21a5d.js" crossorigin="anonymous"></script>
     <style>
         /* Basic Reset */
@@ -358,6 +359,67 @@
             transition: stroke-dasharray 0.3s ease;
         }
 
+        .portfolio {
+            padding: 50px;
+            text-align: center;    
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 0.7fr));
+            gap: 20px;
+        }
+        
+        .portfolio-card {
+            background-color: #222;
+            padding: 2px;
+            border-radius: 10px;
+            text-align: center; 
+            border: 2px solid #ff4500; /* Corrected border */
+              
+        }
+
+        .portfolio-card:hover{
+            
+        }
+
+        .portfolio-card img {
+            width: 100%;
+            border-radius: 10px;
+            fit: cover;
+        }
+
+        .portfolio h2 {
+            width:100%;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .portfolio-card h3 {
+            font-size: 20px;
+            margin: 20px 0;
+            color: #ff4500;
+        }
+
+        .portfolio p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #aaa;
+        }
+
+        
+        .portfolio-card p {
+            color: #ff4500;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-card i {
+            font-size: 40px;
+            color: #888; /* Adjust this value for the desired icon color */
+        }
+
         @media (max-width: 768px) {
             nav .nav-item {
                 padding: 5px; /* Reduce padding on smaller screens */
@@ -426,11 +488,40 @@
             }
         }
 
+
     </style>
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const webCards = document.querySelector(".web-cards");
+            const mobileCards = document.querySelector(".mobile-cards");
+            const desktopCards = document.querySelector(".desktop-cards");
+
+            // Show only web projects by default
+            webCards.style.display = "block";
+            mobileCards.style.display = "none";
+            desktopCards.style.display = "none";
+
+            function showCategory(category) {
+                // Hide all categories
+                webCards.style.display = "none";
+                mobileCards.style.display = "none";
+                desktopCards.style.display = "none";
+
+                // Show the selected category
+                if (category === "web") webCards.style.display = "block";
+                if (category === "mobile") mobileCards.style.display = "block";
+                if (category === "desktop") desktopCards.style.display = "block";
+            }
+
+            // Event listeners for category switching
+            document.getElementById("web-btn").addEventListener("click", () => showCategory("web"));
+            document.getElementById("mobile-btn").addEventListener("click", () => showCategory("mobile"));
+            document.getElementById("desktop-btn").addEventListener("click", () => showCategory("desktop"));
+        });
+
         document.querySelectorAll(".skill").forEach((skill) => {
             const percent = skill.getAttribute("data-percent");
             const progressCircle = skill.querySelector(".progress");
@@ -486,7 +577,7 @@
                 </div>
             </div>
             <div class="image">
-                <img src="./assets/pp6.jpg" alt="Abbas Khan" style="border-radius: 5%; max-width: 400px;">
+                <img src="./assets/pp6.png" alt="Abbas Khan" style="border-radius: 5%; max-width: 400px;">
             </div>
         </div>
         <div class="stats">
@@ -739,47 +830,59 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
     <section class="portfolio" id="portfolio">
-        <div class="portflio-cards">
-            <!--><div class="portflio-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Mobile UI/UX Design</h3>
-                <p>Create intuitive and visually engaging interfaces for mobile applications, ensuring seamless navigation and an enhanced user experience.</p>
-            </div>
-            <div class="portflio-card">
-                <i class="fas fa-drafting-compass"></i>
-                <h3>Wireframing and Prototyping</h3>
-                <p>Transform ideas into interactive prototypes and wireframes, bringing clarity and functionality to your concepts</p>
-            </div>
-            <div class="portflio-card">
-                <i class="fas fa-laptop-code"></i>
-                <h3>Web App Design</h3>
-                <p>Design responsive web applications optimized for desktop and mobile platforms, focusing on speed and user-centric design.</p>
-            </div>
-            <div class="portflio-card">
-                <i class="fas fa-palette"></i>
-                <h3>Brand Identity Design</h3>
-                <p>Develop cohesive and unique visual identities, including logos, typography, and color schemes, to define your brand's voice.</p>
-            </div>
-            <div class="portflio-card">
-                <i class="fas fa-search"></i>
-                <h3>User Research and Testing</h3>
-                <p>Conduct thorough user research and usability testing to deliver designs that resonate with your target audience.</p>
-            </div>
-            <div class="portflio-card">
-                <i class="fas fa-play"></i>
-                <h3>Motion and Interaction Design</h3>
-                <p>Add life to your applications with animations and interactive elements that delight and engage users.</p>
-            </div>
-            <-->
-            <div class="web-cards">
-                
-            </div>
-            <div class="mobile-cards">
+        <h2>Portfolio</h2>
+        <hr>
+        <br>
+        <p>
+            These are some of the projects i have done in the past. I have worked on multiple projects in different areas of software development.
+        </p>
+        <div id="portfolio-buttons" class="portfolio-buttons">
+            <button id="web-btn" class="portfolio-button">Web Projects</button>
+            <button id="mobile-btn" class="portfolio-button">Mobile Projects</button>
+            <button id="desktop-btn" class="portfolio-button">Desktop Projects</button>
+        </div>
 
+        <div class="cards">
+            <div class="portfolio-card">
+                <img src="./assets/screenshots/web/CampusConnect.png">
+                <p>Campus Social Media Website</p>
             </div>
-            <div class="desktop-cards">
 
+            <div class="portfolio-card">
+                <img src="./assets/screenshots/web/e-commerce.PNG">
+                <p>Online Shop</p>
             </div>
+
+            <div class="portfolio-card">
+                <img src="./assets/screenshots/web/my-website.PNG">
+                <p>Portfolio Website</p>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="./assets/screenshots/web/empTrack.PNG">
+                <p>Employee Record Management System</p>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="./assets/screenshots/web/IT-services.PNG">
+                <p>IT Services' company website</p>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="./assets/screenshots/web/online-compiler.PNG">
+                <p>Online code compiler</p>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="./assets/screenshots/web/university-management-system.PNG">
+                <p>Central System for a University</p>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="./assets/screenshots/web/car-showroom-system.png">
+                <p>Car Showroom inventory management system</p>
+            </div>
+
         </div>
     </section>
 </body>
