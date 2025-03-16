@@ -522,6 +522,32 @@
             document.getElementById("desktop-btn").addEventListener("click", () => showCategory("desktop"));
         });
 
+        document.addEventListener("DOMContentLoaded", function () {
+        const portfolioCards = document.querySelectorAll(".portfolio-card");
+        const buttons = document.querySelectorAll(".portfolio-button");
+
+        function filterCategory(category) {
+            portfolioCards.forEach(card => {
+                const cardCategory = card.getAttribute("data-category");
+                if (category === "all" || cardCategory === category) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+           });
+    }
+
+    // Event listeners for category buttons
+    document.getElementById("web-btn").addEventListener("click", () => filterCategory("web"));
+    document.getElementById("mobile-btn").addEventListener("click", () => filterCategory("mobile"));
+    document.getElementById("desktop-btn").addEventListener("click", () => filterCategory("desktop"));
+
+    // Optional: Show all projects by default
+    filterCategory("all");
+});
+
+
+
         document.querySelectorAll(".skill").forEach((skill) => {
             const percent = skill.getAttribute("data-percent");
             const progressCircle = skill.querySelector(".progress");
@@ -843,44 +869,59 @@
         </div>
 
         <div class="cards">
-            <div class="portfolio-card">
+            <div class="portfolio-card" data-category="web">
                 <img src="./assets/screenshots/web/CampusConnect.png">
                 <p>Campus Social Media Website</p>
             </div>
 
-            <div class="portfolio-card">
+            <div class="portfolio-card" data-category="web">
                 <img src="./assets/screenshots/web/e-commerce.PNG">
                 <p>Online Shop</p>
             </div>
 
-            <div class="portfolio-card">
+            <div class="portfolio-card" data-category="web">
                 <img src="./assets/screenshots/web/my-website.PNG">
                 <p>Portfolio Website</p>
             </div>
 
-            <div class="portfolio-card">
+            <div class="portfolio-card" data-category="web">
                 <img src="./assets/screenshots/web/empTrack.PNG">
                 <p>Employee Record Management System</p>
             </div>
 
-            <div class="portfolio-card">
+            <div class="portfolio-card" data-category="web">
                 <img src="./assets/screenshots/web/IT-services.PNG">
                 <p>IT Services' company website</p>
             </div>
 
-            <div class="portfolio-card">
+            <div class="portfolio-card" data-category="web">
                 <img src="./assets/screenshots/web/online-compiler.PNG">
                 <p>Online code compiler</p>
             </div>
 
-            <div class="portfolio-card">
+            <div class="portfolio-card" data-category="web">
                 <img src="./assets/screenshots/web/university-management-system.PNG">
                 <p>Central System for a University</p>
             </div>
 
-            <div class="portfolio-card">
+            <div class="portfolio-card" data-category="web">
                 <img src="./assets/screenshots/web/car-showroom-system.png">
                 <p>Car Showroom inventory management system</p>
+            </div>
+
+            <div class="portfolio-card" data-category="desktop">
+                <img src="./assets/screenshots/desktop/automobile-sales-management-system.PNG">
+                <p>an automobile sales maagement system</p>
+            </div>
+
+            <div class="portfolio-card" data-category="desktop">
+                <img src="./assets/screenshots/desktop/contact-manager.PNG">
+                <p>calling now simpler! simple contact manager</p>
+            </div>
+
+            <div class="portfolio-card" data-category="desktop">
+                <img src="./assets/screenshots/desktop/temp-converter.PNG">
+                <p>temprature conivese of the system</p>
             </div>
 
         </div>
