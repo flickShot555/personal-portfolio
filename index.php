@@ -364,6 +364,32 @@
             text-align: center;    
         }
 
+        .portfolio-buttons {
+            
+            margin:20px;
+            display:flex;
+            flex-direction: row;
+            flex-wrap:wrap;
+            align-items: center;
+            justify-content: center;
+            gap:20px;
+        }
+
+        .portfolio-button {
+            padding: 10px;
+            font-size:15px;
+            background-color: #1a1a1a;
+            /*color:#ff4500;*/
+            color:#fff;
+            border-radius:10px;
+        }
+
+        .portfolio-button:hover{
+            background-color: #ff5800;
+            transition: background-color 0.3s ease;
+            cursor:pointer;
+        }
+
         .cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 0.7fr));
@@ -418,6 +444,40 @@
         .portfolio-card i {
             font-size: 40px;
             color: #888; /* Adjust this value for the desired icon color */
+        }
+
+        footer{
+            padding: 20px;
+            text-align: center;
+            background-color: #ff4500;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        footer footer-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .social-icons i {
+            font-size: 24px;
+            color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons i:hover {
+            transform: scale(1.2);
+
         }
 
         @media (max-width: 768px) {
@@ -495,56 +555,28 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const webCards = document.querySelector(".web-cards");
-            const mobileCards = document.querySelector(".mobile-cards");
-            const desktopCards = document.querySelector(".desktop-cards");
+            const portfolioCards = document.querySelectorAll(".portfolio-card");
+            const buttons = document.querySelectorAll(".portfolio-button");
 
-            // Show only web projects by default
-            webCards.style.display = "block";
-            mobileCards.style.display = "none";
-            desktopCards.style.display = "none";
-
-            function showCategory(category) {
-                // Hide all categories
-                webCards.style.display = "none";
-                mobileCards.style.display = "none";
-                desktopCards.style.display = "none";
-
-                // Show the selected category
-                if (category === "web") webCards.style.display = "block";
-                if (category === "mobile") mobileCards.style.display = "block";
-                if (category === "desktop") desktopCards.style.display = "block";
+            function filterCategory(category) {
+                portfolioCards.forEach(card => {
+                    const cardCategory = card.getAttribute("data-category");
+                    if (category === "all" || cardCategory === category) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
             }
 
-            // Event listeners for category switching
-            document.getElementById("web-btn").addEventListener("click", () => showCategory("web"));
-            document.getElementById("mobile-btn").addEventListener("click", () => showCategory("mobile"));
-            document.getElementById("desktop-btn").addEventListener("click", () => showCategory("desktop"));
+            // Event listeners for category buttons
+            document.getElementById("web-btn").addEventListener("click", () => filterCategory("web"));
+            document.getElementById("mobile-btn").addEventListener("click", () => filterCategory("mobile"));
+            document.getElementById("desktop-btn").addEventListener("click", () => filterCategory("desktop"));
+
+            // Optional: Show all projects by default
+            filterCategory("web");
         });
-
-        document.addEventListener("DOMContentLoaded", function () {
-        const portfolioCards = document.querySelectorAll(".portfolio-card");
-        const buttons = document.querySelectorAll(".portfolio-button");
-
-        function filterCategory(category) {
-            portfolioCards.forEach(card => {
-                const cardCategory = card.getAttribute("data-category");
-                if (category === "all" || cardCategory === category) {
-                    card.style.display = "block";
-                } else {
-                    card.style.display = "none";
-                }
-           });
-    }
-
-    // Event listeners for category buttons
-    document.getElementById("web-btn").addEventListener("click", () => filterCategory("web"));
-    document.getElementById("mobile-btn").addEventListener("click", () => filterCategory("mobile"));
-    document.getElementById("desktop-btn").addEventListener("click", () => filterCategory("desktop"));
-
-    // Optional: Show all projects by default
-    filterCategory("all");
-});
 
 
 
@@ -921,11 +953,25 @@
 
             <div class="portfolio-card" data-category="desktop">
                 <img src="./assets/screenshots/desktop/temp-converter.PNG">
-                <p>temprature conivese of the system</p>
+                <p>temprature conversion system</p>
             </div>
 
         </div>
     </section>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 - Abbas Khan</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/the-abbas-khan/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i> </a>
+                <a href="https://www.instagram.com/aepostrophee/" target="_blank"><i class="fab fa-instagram"></i> </a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
