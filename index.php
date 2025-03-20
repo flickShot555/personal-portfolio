@@ -410,16 +410,65 @@
               
         }
 
-        .portfolio-card:hover{
-            
+        .portfolio-card .imgbox {
+            width: 100%;
+            height: auto; /* 700px Define height */
+            border-radius: 10px;
+            overflow: hidden; /* Ensure image doesn't overflow */
+            position: relative; /* Position for the hover effect */
         }
 
-        .portfolio-card img {
-            /*max-height:50vh;*/
-            width: 100%;
-            /*width: auto;*/
-            border-radius: 10px;
-            fit: cover;
+        .portfolio-card .imgbox img {
+            width: 100%; 
+            height: 100%; 
+            object-fit:cover; 
+            /*object-position: 50% 90%;
+            border-radius: 10px;*/
+            transition: 0.5s ease-in-out; 
+        }
+
+        .portfolio-card .imgbox::after {
+            content: "";
+            position: absolute;
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            bottom: 0; 
+            border: 2px solid white; /* Border color */
+            border-radius: 25px;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.4s ease-in-out, inset 0.4s ease-in-out; /* Transition for opacity and inset */
+        }
+
+        .portfolio-card:hover .imgbox::after {
+            opacity: 1; 
+            inset: 20px; /* Create a border effect by adjusting inset */
+        }
+
+        .portfolio-card:hover .imgbox img {
+            filter: grayscale(1) brightness(0.4);
+        }
+
+        .portfolio-card:hover .content p {
+            opacity: 1; 
+            transform: translateY(0);
+        }
+
+
+        .portfolio-card .content {
+            position: absolute; /* Position the content absolutely */
+            top: 50%; /* Center the content vertically */
+            left: 50%; /* Center the content horizontally */
+            transform: translate(-50%, -50%); /* Adjust the content position */
+            text-align: center; /* Center the content horizontally */
+            color: #FFFFFF; /* Content color (white in this case) */
+            font-size: 50px;
+            opacity: 0; /* Initially hide the content */
+            transition: opacity 0.4s ease-in-out; /* Transition for opacity */
+        }
+
+        .portfolio-card:hover .content {
+            opacity: 1; /* Show the content on hover */
         }
 
         .portfolio h2 {
@@ -990,68 +1039,133 @@
 
         <div class="cards">
             <div class="portfolio-card" data-category="web">
-                <img src="./assets/screenshots/web/CampusConnect.png">
+                <div class="imgbox">
+                    <img src="./assets/screenshots/web/CampusConnect.png">
+                    <div class="content">
+                        other details
+                    </div>
+                </div>
                 <p>Campus Social Media Website</p>
             </div>
 
             <div class="portfolio-card" data-category="web">
-                <img src="./assets/screenshots/web/e-commerce.PNG">
+                <div class="imgbox">
+                    <img src="./assets/screenshots/web/e-commerce.PNG">
+                    <div class="content">
+                        <p>other details</p>
+                    </div>
+                </div>
                 <p>Online Shop</p>
             </div>
 
             <div class="portfolio-card" data-category="web">
-                <img src="./assets/screenshots/web/my-website.PNG">
+                <div class="imgbox">
+                    <img src="./assets/screenshots/web/my-website.png">
+                    <div class="content">
+                        <p>other details</p>
+                    </div>
+                </div>
                 <p>Portfolio Website</p>
             </div>
 
             <div class="portfolio-card" data-category="web">
-                <img src="./assets/screenshots/web/empTrack.PNG">
+                <div class="imgbox">
+                    <img src="./assets/screenshots/web/empTrack.PNG">
+                    <div class="content">
+                        <p>other details</p>
+                    </div>
+                </div>
                 <p>Employee Record Management System</p>
             </div>
 
             <div class="portfolio-card" data-category="web">
-                <img src="./assets/screenshots/web/IT-services.PNG">
+                <div class="imgbox">
+                    <img src="./assets/screenshots/web/IT-services.PNG">
+                    <div class="content">
+                        <p>other details</p>
+                    </div>
+                </div>
                 <p>IT Services' company website</p>
             </div>
 
             <div class="portfolio-card" data-category="web">
-                <img src="./assets/screenshots/web/online-compiler.PNG">
+                <div class="imgbox">
+                    <img src="./assets/screenshots/web/online-compiler.PNG">
+                    <div class="content">
+                        <p>other details</p>
+                    </div>
+                </div>
                 <p>Online code compiler</p>
             </div>
 
             <div class="portfolio-card" data-category="web">
-                <img src="./assets/screenshots/web/university-management-system.PNG">
+                <div class="imgbox">
+                    <img src="./assets/screenshots/web/university-management-system.png">
+                    <div class="content">
+                        <p>other details</p>
+                    </div>
+                </div>
                 <p>Central System for a University</p>
             </div>
 
             <div class="portfolio-card" data-category="web">
-                <img src="./assets/screenshots/web/car-showroom-system.png">
+                <div class="imgbox">
+                    <img src="./assets/screenshots/web/car-showroom-system.png">
+                    <div class="content">
+                        <p>other details</p>
+                    </div>
+                </div>
                 <p>Car Showroom inventory management system</p>
             </div>
 
             <div class="portfolio-card" data-category="desktop">
-                <img src="./assets/screenshots/desktop/automobile-sales-management-system.PNG">
+                <div class="imgbox">
+                    <img src="./assets/screenshots/desktop/automobile-sales-management-system.PNG">
+                    <div class="content">
+                        <p>other details</p>
+                    </div>
+                </div>
                 <p>an automobile sales management system</p>
             </div>
 
             <div class="portfolio-card" data-category="desktop">
-                <img src="./assets/screenshots/desktop/contact-manager.PNG">
+                <div class="imgbox">
+                    <img src="./assets/screenshots/desktop/contact-manager.PNG">
+                    <div class="content">
+                        <p>other details</p>
+                    </div>
+                </div>
                 <p>calling now simpler! simple contact manager</p>
             </div>
 
             <div class="portfolio-card" data-category="desktop">
-                <img src="./assets/screenshots/desktop/temp-converter.PNG">
+                <div class="imgbox">
+                    <img src="./assets/screenshots/desktop/temp-converter.PNG">
+                    <div class="content">
+                        <p>other details</p>
+                    </div>
+                </div>
                 <p>temprature conversion system</p>
             </div>
 
             <div class="portfolio-card" data-category="mobile">
-                <img src="./assets/screenshots/mobile/WaterReminderApp.PNG">
-                <p>temprature conversion system</p>
+                <div class="imgbox">
+                    <img src="./assets/screenshots/mobile/portfolio.jpg">
+                    <div class="content">
+                        <p>other details</p>
+                    </div>
+                </div>
+                <p>a simple portfolio</p>
             </div>
 
             <div class="portfolio-card" data-category="mobile">
-                <img src="./assets/screenshots/mobile/portfolio.jpg">
-                <p>temprature conversion system</p>
+                <div class="imgbox">
+                    <img src="./assets/screenshots/mobile/WaterReminderApp.png">
+                    <div class="content">
+                        <p>other details</p>
+                    </div>
+                </div>
+                <p>Water Reminder App</p>
             </div>
 
         </div>
