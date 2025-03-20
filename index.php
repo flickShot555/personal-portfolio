@@ -383,7 +383,7 @@
                 </div>
                 <p>Campus Social Media Website</p>
                 <div class="p_icons">
-                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.github.com/flickShot555/CODOTECH/tree/main/College-Social-Media-Website" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="assets/projects/CampusConnect/index.html" target="_blank"><i class="fas fa-share-from-square"></i> </a>
                 </div>
             </div>
@@ -404,7 +404,7 @@
                 </div>
                 <p>Online Shop</p>
                 <div class="p_icons">
-                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/flickShot555/CODOTECH/tree/main/Fertilizer-Shop-Website" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="assets/projects/e-commerce/index.html" target="_blank"><i class="fas fa-share-from-square"></i> </a>
                 </div>
             </div>
@@ -423,7 +423,7 @@
                 </div>
                 <p>Portfolio Website</p>
                 <div class="p_icons">
-                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/flickShot555/personal-portfolio" target="_blank"><i class="fab fa-github"></i></a>
                     <!--a href="assets/projects/" target="_blank"><i class="fas fa-share-from-square">try it!</i> </!a-->
                 </div>
             </div>
@@ -443,7 +443,7 @@
                 </div>
                 <p>Employee Record Management System</p>
                 <div class="p_icons">
-                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.github.com/flickShot555/CODOTECH/tree/main/Employee-Management-Website" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="assets/projects/empTrack/index.html" target="_blank"><i class="fas fa-share-from-square"></i> </a>
                 </div>
             </div>
@@ -462,7 +462,7 @@
                 </div>
                 <p>IT Services' company website</p>
                 <div class="p_icons">
-                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/flickShot555/CODOTECH/tree/main/IT-Services-Company-Website" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="assets/projects/IT-services/index.html" target="_blank"><i class="fas fa-share-from-square"></i> </a>
                 </div>
             </div>
@@ -482,7 +482,7 @@
                 </div>
                 <p>Online code compiler</p>
                 <div class="p_icons">
-                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/flickShot555/CODOTECH/tree/main/Online-Compiler-Website" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="assets/projects/online-compiler/index.html" target="_blank"><i class="fas fa-share-from-square"></i> </a>
                 </div>
             </div>
@@ -501,7 +501,7 @@
                 </div>
                 <p>Central System for a University</p>
                 <div class="p_icons">
-                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/flickShot555/YoungDevInterns_FullStack_Tasks/tree/main/university-website" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
 
@@ -520,7 +520,7 @@
                 </div>
                 <p>Car Showroom inventory management system</p>
                 <div class="p_icons">
-                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/flickShot555/car-showroom-management-system" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
 
@@ -538,7 +538,7 @@
                 </div>
                 <p>an automobile sales management system</p>
                 <div class="p_icons">
-                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/flickShot555/Automobile.Sales.Management.System" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
 
@@ -557,7 +557,7 @@
                 </div>
                 <p>calling now simpler! simple contact manager</p>
                 <div class="p_icons">
-                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/flickShot555/PRODIGY_SD_03" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
 
@@ -566,13 +566,17 @@
                     <img src="./assets/screenshots/desktop/temp-converter.PNG">
                     <div class="content">
                         <div class="textdetails">
-                            other details
+                            temperature converter is a flask based desktop based software solution that is intended to be 
+                            used by the people who are having difficulties in converting temperature from one unit to another.
+                            it is simple, yet provides ease in conversion as well as a demonstration of using flask in desktop.
+                            tech stack used in this project is Python (Flask).
+                            visit github through the link below
                         </div>
                     </div>
                 </div>
                 <p>temprature conversion system</p>
                 <div class="p_icons">
-                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/flickShot555/PRODIGY_SD_01" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
 
@@ -581,13 +585,18 @@
                     <img src="./assets/screenshots/mobile/portfolio.jpg">
                     <div class="content">
                         <div class="textdetails">
-                            other details
+                            This project is developed to demonstrate the rendering of UI elements of react-native on a 
+                            mobile device. This project is a simple portfolio application that displays the user's basic 
+                            details, his skills, and the projects he has done in the past. also, there is a very fun part 
+                            at the end where the contact methods are opened in the respective applications.
+                            the tech stack used in this project is Javascript (React-Native).
+                            visit the github portfolio through the following link.
                         </div>
                     </div>
                 </div>
                 <p>a simple portfolio</p>
                 <div class="p_icons">
-                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.github.com/flickShot555/Cognifyz-Tech/tree/main/basicUILayoutApp" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
 
@@ -596,13 +605,18 @@
                     <img src="./assets/screenshots/mobile/WaterReminderApp.png">
                     <div class="content">
                         <div class="textdetails">
-                            other details
+                            water reminder app is a mobile application that is intended to be used by the people who do not readily
+                            take care of their water levels in their bodies. the application sends reminder notifications to the 
+                            users device after a certain time, and the user can then snooze the notification until the next time interval.
+                            it is very eficiently designed and developed using react-native, which will be evident from the source code 
+                            and the UI.
+                            visit the github repo through the following link.
                         </div>
                     </div>
                 </div>
                 <p>Water Reminder App</p>
                 <div class="p_icons">
-                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/flickShot555/water-reminder-app" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
 
