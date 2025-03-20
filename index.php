@@ -6,724 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"-->
     <title>The Abbas Khan</title>
-    <!--link rel="stylesheet" href="css/styles.css"-->
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/6e98f21a5d.js" crossorigin="anonymous"></script>
-    <style>
-        /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: #fff;
-            line-height: 1.6;
-        }
-
-        header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 50px;
-            background-color: #1a1a1a;
-        }
-        
-        header nav {
-            background-color: #333;
-            border: 2px solid #ff4500;
-            padding: 10px 20px;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: row;
-        }
-
-        nav .nav-item {
-            color: #fff;
-            font-style: normal; /* Changed 'none' to 'normal' for clarity */
-            margin: 0 15px;
-            padding: 10px; /* Padding for better spacing */
-            box-sizing: border-box; /* Ensures padding doesn't affect total size */
-            position: relative; /* Required for relative positioning */
-            transition: all 0.3s ease; /* Smooth transitions for hover effects */
-            display: flex; /* Added to align content properly */
-            align-items: center; /* Centers icon and text vertically */
-            justify-content: center; /* Centers content horizontally */
-
-        }
-
-        nav .nav-item:hover {
-            background-color: #ff5800; /* Highlight background on hover */
-            font-weight: bold;
-            transform: scale(1.1); /* Slight scaling effect */
-            transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
-        }
-
-        
-
-        nav .nav-item span {
-            display: inline-block; /* Ensures proper inline layout */
-            margin-left: 5px; /* Adds spacing between icon and text */
-
-        }
-
-        nav .nav-item i {
-            display: none;
-            /**font-size: 1.2rem; /* Adjust icon size for better visibility */
-            width: auto;*/
-
-        }
-        
-        nav .nav-item:hover i {
-            transform: scale(1.2); /* Slight scaling effect on hover */
-        }
-
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .hero .container{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
-            padding: 20px;
-            gap:30vw;
-        }
-
-
-        .hero .content {
-            max-width: 100%;
-            padding:2%;
-        }
-
-        
-        .hero p {
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        .hero h1 {
-            max-width:100%;
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: #ff4500;
-        }
-
-
-        .hero .buttons{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .hero .buttons a {
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-right: 15px;
-            font-weight: bold;
-        }
-
-
-        .btn-primary {
-            background-color: #ff4800;
-            color: #fff;
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: #fff;
-            border: 2px solid #fff;
-        }
-
-        .hero .stats {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-            background-color: #333;
-            padding-left: 40px;
-            padding-right: 40px;
-            clear:both;
-            border-radius: 10px;
-            float:left;
-        }
-
-        .hero .stats div {
-            text-align: center;
-            padding:30px;
-        }
-
-        .hero .stats div h3 {
-            font-size: 24px;
-            color: #ff4500;
-        }
-
-        .hero .stats div p {
-            font-size: 16px;
-        }
-
-        .services {
-            padding: 50px;
-            text-align: center;
-            
-        }
-
-        .services h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-
-        .services p {
-            margin-bottom: 40px;
-            font-size: 18px;
-            color: #aaa;
-        }
-
-        .service-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .service-card {
-            background-color: #222;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .service-card h3 {
-            font-size: 20px;
-            margin: 20px 0;
-            color: #ff4500;
-        }
-
-        .service-card p {
-            color: #aaa;
-        }
-
-        .service-card i {
-            font-size: 40px;
-            color: #888; /* Adjust this value for the desired icon color */
-        }
-
-        .about {
-            padding: 50px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .about h2 {
-            width:100%;
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-
-        .about p {
-            margin-bottom: 20px;
-            font-size: 18px;
-            color: #aaa;
-        }
-
-        .about-content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            text-align: left;
-            padding:5%;
-        }
-
-        .about-content .image {
-            flex: 1;
-            max-width: 400px;
-            margin: 20px;
-        }
-
-        .about-content .text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size:18px;
-            flex: 2;
-            margin: 20px;
-            padding-left:30px;
-            padding-right:30px;
-        }
-
-        .about-content .text p {
-            color: #aaa;
-            font-size:18px;
-        }
-
-        .download-cv {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #ff4500;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .skill-section {
-            padding: 50px;
-            background-color: #1a1a1a;
-        }
-
-        .skill-section h2 {
-            text-align: center;
-            font-size: 36px;
-            color: #fff;
-            margin-bottom: 30px;
-        }
-
-        .skill-container {
-            display: flex;
-            flex-wrap:wrap;
-            gap: 5%;
-            justify-content: center;
-            align-items: center;
-            background-color: #1a1a1a;
-            padding: 20px;
-        }
-
-        .skill {
-            text-align: center;
-            color: white;
-            font-family: Arial, sans-serif;
-            position: relative;
-            padding:1%;
-        }
-
-        .icon-container {
-            position: relative;
-            width: 100px;
-            height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .skill svg {
-            position: relative;
-            width: 140px;
-            height: 140px;
-            transform: rotate(90deg);
-        }
-
-        .skill .icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 40px;
-            color: #888; /* Adjust this value for the desired icon color */
-        }
-        
-        .skill p {
-            margin-top: 5px;
-            font-size: 14px;
-            color: #aaa;
-        }
-
-        .skill r {
-            margin-top: 5px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #ff4800;
-        }
-
-        .circle-bg {
-            fill: none;
-            stroke: #333;
-            stroke-width: 3.8;
-        }
-
-        .circle {
-            fill: none;
-            stroke: #ff4500;
-            stroke-width: 3.8;
-            stroke-linecap: round;
-            transform: rotate(-90deg);
-            transform-origin: center;
-            transition: stroke-dasharray 0.3s ease;
-        }
-
-        .portfolio {
-            padding: 50px;
-            text-align: center;    
-        }
-
-        .portfolio-buttons {
-            
-            margin:20px;
-            display:flex;
-            flex-direction: row;
-            flex-wrap:wrap;
-            align-items: center;
-            justify-content: center;
-            gap:20px;
-        }
-
-        .portfolio-button {
-            padding: 10px;
-            font-size:15px;
-            background-color: #1a1a1a;
-            /*color:#ff4500;*/
-            color:#fff;
-            border-radius:10px;
-        }
-
-        .portfolio-button:hover{
-            background-color: #ff5800;
-            transition: background-color 0.3s ease;
-            cursor:pointer;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 0.7fr));
-            gap: 20px;
-        }
-        
-        .portfolio-card {
-            
-            background-color: #222;
-            padding: 2px;
-            border-radius: 10px;
-            text-align: center; 
-            border: 2px solid #ff4500; /* Corrected border */
-              
-        }
-
-        .portfolio-card .imgbox {
-            width: 100%;
-            height: auto; /* 700px Define height */
-            border-radius: 10px;
-            overflow: hidden; /* Ensure image doesn't overflow */
-            position: relative; /* Position for the hover effect */
-        }
-
-        .portfolio-card .imgbox img {
-            width: 100%; 
-            height: 100%; 
-            object-fit:cover; 
-            /*object-position: 50% 90%;
-            border-radius: 10px;*/
-            transition: 0.5s ease-in-out; 
-        }
-
-        .portfolio-card .imgbox::after {
-            content: "";
-            position: absolute;
-            top: 0; 
-            left: 0; 
-            right: 0; 
-            bottom: 0; 
-            border: 2px solid white; /* Border color */
-            border-radius: 10px;
-            opacity: 0; /* Initially hidden */
-            transition: opacity 0.4s ease-in-out, inset 0.4s ease-in-out; /* Transition for opacity and inset */
-        }
-
-        .portfolio-card:hover .imgbox::after {
-            opacity: 1; 
-            inset: 10px; /* Create a border effect by adjusting inset */
-        }
-
-        .portfolio-card:hover .imgbox img {
-            filter: grayscale(1) brightness(0.4);
-        }
-
-
-        .portfolio-card .content {
-            position: absolute; /* Position the content absolutely */
-            top: 50%; /* Center the content vertically */
-            left: 50%; /* Center the content horizontally */
-            transform: translate(-50%, -50%); /* Adjust the content position */
-            text-align: center; /* Center the content horizontally */
-            color: #FFFFFF; /* Content color (white in this case) */
-            font-size: 20px;
-            opacity: 0; /* Initially hide the content */
-            transition: opacity 0.4s ease-in-out; /* Transition for opacity */
-        }
-
-        .portfolio-card:hover .content {
-            opacity: 1; /* Show the content on hover */
-            pointer-events: auto; /* Allow interaction */
-        }
-
-        .portfolio-card:hover .content p {
-            font-size:10px;
-            opacity: 1; 
-            transform: translateY(0);
-        }
-
-        .portfolio h2 {
-            width:100%;
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-
-        .portfolio-card h3 {
-            font-size: 20px;
-            margin: 20px 0;
-            color: #ff4500;
-        }
-
-        .portfolio p {
-            margin-bottom: 20px;
-            font-size: 18px;
-            color: #aaa;
-        }
-
-        
-        .portfolio-card p {
-            color: #ff4500;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .portfolio-card .textdetails{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .portfolio-card .icons a {
-            text-decoration: none; /* Remove underline */
-            color: white; /* Default text color */
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: transform 0.3s ease, color 0.3s ease;
-            cursor: pointer;
-            pointer-events: auto; /* Ensure the links are clickable */
-        }
-
-        .portfolio-card .icons a:hover {
-            color: #ff4500;
-        }
-
-        .portfolio-card .icons a:hover i {
-            transform: scale(1.2);
-            color: #ff4500;
-        }
-
-        /*.portfolio-card:hover .p_icons {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }*/
-
-        .p_icons i {
-            font-size: 24px;
-            margin:10px;
-            color: #fff;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-
-        .p_icons i:hover {
-            transform: scale(1.2);
-            cursor: pointer;
-        }
-
-        /*.portfolio-card i {
-            font-size: 40px;
-            color: #888; /* Adjust this value for the desired icon color /
-        }*/
-
-        .contact {
-            padding: 50px;
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-
-        .contact-form {
-            background-color: #222;
-            border-radius:10px;
-            padding: 20px;
-            display:flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .contact p {
-            margin-bottom: 20px;
-            font-size: 18px;
-            color: #aaa;
-        }
-        
-        .contact-form label {
-            font-size: 15px;
-            color: #fff;
-        }
-
-        .contact-form input {
-            width: 100%;
-            padding: 10px;
-            border-radius: 10px;
-            background-color: #888;
-            /*border: 1px solid #ff4500;*/
-        }
-
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 10px;
-            background-color: #888;
-            /*border: 1px solid #ff4500;*/
-        }
-
-        .contact-form button {
-            font-size:18px;
-            padding: 10px 20px;
-            background-color: #ff4500;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        footer{
-            padding: 20px;
-            text-align: center;
-            background-color: #ff4500;
-            color: #fff;
-            font-size: 20px;
-        }
-
-        footer footer-content{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-            gap: 20px;
-        }
-
-        .social-icons i {
-            font-size: 24px;
-            color: #fff;
-            transition: transform 0.3s ease;
-        }
-
-        .social-icons i:hover {
-            transform: scale(1.2);
-
-        }
-
-        @media (max-width: 768px) {
-            nav .nav-item {
-                padding: 5px; /* Reduce padding on smaller screens */
-                justify-content: center; /* Center content */
-            }
-
-            nav .nav-item span {
-                display: none; /* Hide text on smaller screens */
-            }
-
-            nav .nav-item i {
-                font-size: 1.5rem; /* Increase icon size for better visibility */
-                display: inline-block; /* Ensure icons remain visible */
-                transition: transform 0.3s ease, font-size 0.3s ease; /* Smooth hover effect */
-            }
-
-            .hero {
-                flex-direction: column;
-            }
-
-
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .hero .container{
-                flex-direction: column;
-            }
-
-            .hero .container .content{
-                order: 2;
-            }
-
-            .about-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .about-content .text {
-            font-size:18px;
-            flex: 2;
-            margin: 20px;
-            padding-left:10px;
-            padding-right:10px;
-            }
-
-            .about-content .text p {
-            color: #aaa;
-            font-size:18px;
-            }
-
-            .stats div h3 {
-                font-size: 20px;
-            }
-
-            .stats div p {
-                font-size: 14px;
-            }
-
-            .skill-card h3 {
-                font-size: 16px;
-            }
-
-            .portfolio-card p{
-                font-size:16px;
-            }
-        }
-
-
-    </style>
+    
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
@@ -766,19 +51,11 @@
             progressCircle.style.strokeDashoffset = offset;
         });
 
-        /*document.getElementById("contactForm").addEventListener("submit", async function(event) {
-            event.preventDefault();
-            
-            const formData = new FormData(this);
+        /*function handlePress() {
+            alert("Please contact me on my email address to schedule a meeting.");
+            //i want to add a calendly link here to schedule a meeting
 
-            const response = await fetch("send_email.php", {
-            method: "POST",
-            body: formData
-            });
-
-            const result = await response.text();
-            document.getElementById("responseMessage").innerText = result;
-        });*/
+        }*/
     </script>
 
 </head>
@@ -816,7 +93,10 @@
         <div class="container">
             <div class="content">
                 <p>Hello, this is</p>
-                <h1>Abbas Khan<br>Software Engineer</h1>
+                <h1>Abbas Khan</h1>
+                <h5>Founder @Aepostrophee</h5>
+                <br>
+                <h3>Software Engineer</h3>
                 <div class="buttons">
                     <a href="https://www.linkedin.com/in/the-abbas-khan/" target="_blank" class="btn-primary">Hire Me</a>
                     <a href="./assets/web_dev_resume.pdf" class="btn-secondary">Download CV</a>
@@ -1094,138 +374,245 @@
                     <img src="./assets/screenshots/web/CampusConnect.png">
                     <div class="content">
                         <div class="textdetails">
-                            other details
-                            <div class="icons">
-                                <a href="https://www.linkedin.com/in/the-abbas-khan/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i> </a>
-                            </div>
+                            CampusConnect is a very basic version or a template of a website that replicates 
+                            a social media of a university campus. This website can be used by any organization 
+                            intends to develop a social media platform but only for their enrolled or employed individuals.
+                            it offers functionalities such as liking & commenting on posts, and toggling theme.
                         </div>
                     </div>
                 </div>
                 <p>Campus Social Media Website</p>
+                <div class="p_icons">
+                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="assets/projects/CampusConnect/index.html" target="_blank"><i class="fas fa-share-from-square"></i> </a>
+                </div>
             </div>
 
             <div class="portfolio-card" data-category="web">
                 <div class="imgbox">
                     <img src="./assets/screenshots/web/e-commerce.PNG">
                     <div class="content">
-                        <p>other details</p>
+                        <div class="textdetails">
+                            this website shows the working of an e-commerce site, it offers features such as 
+                            active-cart-response, bill calculation, product searching (for users), dynamic 
+                            product rendering (for developers).
+                            a dummy theme of fertilizers is used in this, while in actual,any theme 
+                            can be used on this template.
+                            tech stack used in this project is HTML/CSS/JS.
+                        </div>
                     </div>
                 </div>
                 <p>Online Shop</p>
+                <div class="p_icons">
+                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="assets/projects/e-commerce/index.html" target="_blank"><i class="fas fa-share-from-square"></i> </a>
+                </div>
             </div>
 
             <div class="portfolio-card" data-category="web">
                 <div class="imgbox">
                     <img src="./assets/screenshots/web/my-website.png">
                     <div class="content">
-                        <p>other details</p>
+                        <div class="textdetails">
+                            This website is the demonstration of my portflio website, that can be uesd by any fresher as 
+                            a template for developing his/her portfolio website. All the images used in this website/project 
+                            are completely genuine and not copyright of any party.
+                            tech stack used in developing this project is HTML/CSS/JS.
+                        </div>
                     </div>
                 </div>
                 <p>Portfolio Website</p>
+                <div class="p_icons">
+                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <!--a href="assets/projects/" target="_blank"><i class="fas fa-share-from-square">try it!</i> </!a-->
+                </div>
             </div>
 
             <div class="portfolio-card" data-category="web">
                 <div class="imgbox">
                     <img src="./assets/screenshots/web/empTrack.PNG">
                     <div class="content">
-                        <p>other details</p>
+                        <div class="textdetails">
+                            empTrack is a website developed for the businesses that wants to run their record keeping systems
+                            on a cloud server. it allows features such as marking attendance of employees, viewing the report 
+                            graphically, exporting the report in a CSV file, adding a new employee, searching an existing employee.
+                            tech stack used in this project is simply HTML/CSS/JS.
+                            visit the github repo using the below link.
+                        </div>
                     </div>
                 </div>
                 <p>Employee Record Management System</p>
+                <div class="p_icons">
+                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="assets/projects/empTrack/index.html" target="_blank"><i class="fas fa-share-from-square"></i> </a>
+                </div>
             </div>
 
             <div class="portfolio-card" data-category="web">
                 <div class="imgbox">
                     <img src="./assets/screenshots/web/IT-services.PNG">
                     <div class="content">
-                        <p>other details</p>
+                        <div class="textdetails">
+                            This website is developed for a company that offers software solutions. this website can be used 
+                            as a template for developing landing pages for any kind of businesses. this project also demonstrates 
+                            animation using javascript only.
+                            tech stack used for developing this project is HTML/CSS/JS.
+                        </div>
                     </div>
                 </div>
                 <p>IT Services' company website</p>
+                <div class="p_icons">
+                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="assets/projects/IT-services/index.html" target="_blank"><i class="fas fa-share-from-square"></i> </a>
+                </div>
             </div>
 
             <div class="portfolio-card" data-category="web">
                 <div class="imgbox">
                     <img src="./assets/screenshots/web/online-compiler.PNG">
                     <div class="content">
-                        <p>other details</p>
+                        <div class="textdetails">
+                            this website is a demonstration of how a website can be used for solving 
+                            complier problems for the people who are either having difficulties or are 
+                            unable to do configurations sucessfully on their systems.
+                            tech stack used in this project is HTML/CS/JS.
+                            visit github repo for complete project's source code with the following link.
+                        </div>
                     </div>
                 </div>
                 <p>Online code compiler</p>
+                <div class="p_icons">
+                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="assets/projects/online-compiler/index.html" target="_blank"><i class="fas fa-share-from-square"></i> </a>
+                </div>
             </div>
 
             <div class="portfolio-card" data-category="web">
                 <div class="imgbox">
                     <img src="./assets/screenshots/web/university-management-system.png">
                     <div class="content">
-                        <p>other details</p>
+                        <div class="textdetails">
+                        The University Management System is a comprehensive web-based platform designed to streamline and automate 
+                        various administrative tasks within a university. It provides a centralized system for managing student records, 
+                        course registration, faculty information, and academic resources. The system offers features such as student 
+                        enrollment, grade management, class scheduling, and communication tools for students, faculty, and administrators.
+                        </div>
                     </div>
                 </div>
                 <p>Central System for a University</p>
+                <div class="p_icons">
+                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
             </div>
 
             <div class="portfolio-card" data-category="web">
                 <div class="imgbox">
                     <img src="./assets/screenshots/web/car-showroom-system.png">
                     <div class="content">
-                        <p>other details</p>
+                        <div class="textdetails">
+                            Car Showroom system is web based software that is intended to be used by the employees of a car showroom.
+                            this system offers features such as adding a new car, updating the existing car, deleting a car, searching
+                            a car, and viewing the complete inventory of the showroom. 
+                            tech stack used in this project is HTML/CSS/JS.
+
+                        </div>
                     </div>
                 </div>
                 <p>Car Showroom inventory management system</p>
+                <div class="p_icons">
+                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
             </div>
 
             <div class="portfolio-card" data-category="desktop">
                 <div class="imgbox">
                     <img src="./assets/screenshots/desktop/automobile-sales-management-system.PNG">
                     <div class="content">
-                        <p>other details</p>
+                        <div class="textdetails">
+                            This is a desktop based fotware solution for an automobile dealership, it offers a wide variety
+                            of features such as dynamic vehicle record entry, record deletion, persistant record management
+                            using file management.
+                            tech stack used in this project is Java.
+                        </div>
                     </div>
                 </div>
                 <p>an automobile sales management system</p>
+                <div class="p_icons">
+                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
             </div>
 
             <div class="portfolio-card" data-category="desktop">
                 <div class="imgbox">
                     <img src="./assets/screenshots/desktop/contact-manager.PNG">
                     <div class="content">
-                        <p>other details</p>
+                        <div class="textdetails">
+                            Contact manager is a contact storage system that is intended to be used by the people who are
+                            having difficulties in managing their contacts. this system offers features such as adding a new
+                            contact, updating an existing contact, deleting a contact, searching a contact, and viewing the
+                            complete list of contacts.
+                            tech stack used in this project is Python.
+                        </div>
                     </div>
                 </div>
                 <p>calling now simpler! simple contact manager</p>
+                <div class="p_icons">
+                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
             </div>
 
             <div class="portfolio-card" data-category="desktop">
                 <div class="imgbox">
                     <img src="./assets/screenshots/desktop/temp-converter.PNG">
                     <div class="content">
-                        <p>other details</p>
+                        <div class="textdetails">
+                            other details
+                        </div>
                     </div>
                 </div>
                 <p>temprature conversion system</p>
+                <div class="p_icons">
+                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
             </div>
 
             <div class="portfolio-card" data-category="mobile">
                 <div class="imgbox">
                     <img src="./assets/screenshots/mobile/portfolio.jpg">
                     <div class="content">
-                        <p>other details</p>
+                        <div class="textdetails">
+                            other details
+                        </div>
                     </div>
                 </div>
                 <p>a simple portfolio</p>
+                <div class="p_icons">
+                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
             </div>
 
             <div class="portfolio-card" data-category="mobile">
                 <div class="imgbox">
                     <img src="./assets/screenshots/mobile/WaterReminderApp.png">
                     <div class="content">
-                        <p>other details</p>
+                        <div class="textdetails">
+                            other details
+                        </div>
                     </div>
                 </div>
                 <p>Water Reminder App</p>
+                <div class="p_icons">
+                    <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
             </div>
 
         </div>
+    </section>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <section class="recommendations" id="recommendations">
+        
     </section>
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -1254,6 +641,12 @@
                 </div>
 
                 <button type="submit">Send</button>
+                <br>
+                <div style="max-width:100%; border-top : 3px #888 solid; padding:50px;">
+                <a href="https://calendly.com/abbas1795khan/30min">
+                <button type="button" onclick="handlePress()">schedule a meeting</button>
+                </a>
+                </div>
             </form>
 
             <!--p id="responseMessage"></p-->

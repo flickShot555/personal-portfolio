@@ -1,449 +1,718 @@
+
 /* Basic Reset */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-body {
-font-family: Arial, sans-serif;
-background-color: #1a1a1a;
-color: #fff;
-line-height: 1.6;
-}
-
-header {
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 40px 50px;
-background-color: #1a1a1a;
-}
-
-header nav {
-background-color: #333;
-border: 2px solid #ff4500;
-padding: 10px 20px;
-border-radius: 10px;
-display: flex;
-flex-direction: row;
-}
-
-nav .nav-item {
-color: #fff;
-font-style: normal; /* Changed 'none' to 'normal' for clarity */
-margin: 0 15px;
-padding: 10px; /* Padding for better spacing */
-box-sizing: border-box; /* Ensures padding doesn't affect total size */
-position: relative; /* Required for relative positioning */
-transition: all 0.3s ease; /* Smooth transitions for hover effects */
-display: flex; /* Added to align content properly */
-align-items: center; /* Centers icon and text vertically */
-justify-content: center; /* Centers content horizontally */
-
-}
-
-nav .nav-item:hover {
-background-color: #ff5800; /* Highlight background on hover */
-font-weight: bold;
-transform: scale(1.1); /* Slight scaling effect */
-transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
-}
-
-
-
-nav .nav-item span {
-display: inline-block; /* Ensures proper inline layout */
-margin-left: 5px; /* Adds spacing between icon and text */
-
-}
-
-nav .nav-item i {
-display: none;
-/**font-size: 1.2rem; /* Adjust icon size for better visibility */
-width: auto;
-
-}
-
-nav .nav-item:hover i {
-transform: scale(1.2); /* Slight scaling effect on hover */
-}
-
-.hero {
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 20px;
-}
-
-.hero .container{
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-evenly;
-padding: 20px;
-gap:30vw;
-}
-
-
-.hero .content {
-max-width: 100%;
-padding:2%;
-}
-
-
-.hero p {
-margin-bottom: 20px;
-font-size: 18px;
-}
-
-.hero h1 {
-max-width:100%;
-font-size: 3rem;
-margin-bottom: 20px;
-color: #ff4500;
-}
-
-
-.hero .buttons{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-gap: 20px;
-}
-
-.hero .buttons a {
-padding: 10px 20px;
-text-decoration: none;
-border-radius: 5px;
-margin-right: 15px;
-font-weight: bold;
-}
-
-
-.btn-primary {
-background-color: #ff4800;
-color: #fff;
-}
-
-.btn-secondary {
-background-color: transparent;
-color: #fff;
-border: 2px solid #fff;
-}
-
-.hero .stats {
-display: flex;
-justify-content: center;
-margin-top: 50px;
-background-color: #333;
-padding-left: 40px;
-padding-right: 40px;
-clear:both;
-border-radius: 10px;
-float:left;
-}
-
-.hero .stats div {
-text-align: center;
-padding:30px;
-}
-
-.hero .stats div h3 {
-font-size: 24px;
-color: #ff4500;
-}
-
-.hero .stats div p {
-font-size: 16px;
-}
-
-.services {
-padding: 50px;
-text-align: center;
-
-}
-
-.services h2 {
-font-size: 36px;
-margin-bottom: 20px;
-color: #fff;
-}
-
-.services p {
-margin-bottom: 40px;
-font-size: 18px;
-color: #aaa;
-}
-
-.service-cards {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 20px;
-}
-
-.service-card {
-background-color: #222;
-padding: 20px;
-border-radius: 10px;
-text-align: center;
-}
-
-.service-card h3 {
-font-size: 20px;
-margin: 20px 0;
-color: #ff4500;
-}
-
-.service-card p {
-color: #aaa;
-}
-
-.service-card i {
-font-size: 40px;
-color: #888; /* Adjust this value for the desired icon color */
-}
-
-.about {
-padding: 50px;
-text-align: center;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-
-.about h2 {
-width:100%;
-font-size: 36px;
-margin-bottom: 20px;
-color: #fff;
-}
-
-.about p {
-margin-bottom: 20px;
-font-size: 18px;
-color: #aaa;
-}
-
-.about-content {
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-justify-content: center;
-text-align: left;
-padding:5%;
-}
-
-.about-content .image {
-flex: 1;
-max-width: 400px;
-margin: 20px;
-}
-
-.about-content .text {
-font-size:18px;
-flex: 2;
-margin: 20px;
-padding-left:30px;
-padding-right:30px;
-}
-
-.about-content .text p {
-color: #aaa;
-font-size:18px;
-}
-
-.download-cv {
-display: inline-block;
-padding: 10px 20px;
-margin-top: 20px;
-background-color: #ff4500;
-color: #fff;
-text-decoration: none;
-border-radius: 5px;
-font-weight: bold;
-}
-
-.skill-section {
-padding: 50px;
-background-color: #1a1a1a;
-}
-
-.skill-section h2 {
-text-align: center;
-font-size: 36px;
-color: #fff;
-margin-bottom: 30px;
-}
-
-.skill-container {
-display: flex;
-flex-wrap:wrap;
-gap: 5%;
-justify-content: center;
-align-items: center;
-background-color: #1a1a1a;
-padding: 20px;
-}
-
-.skill {
-text-align: center;
-color: white;
-font-family: Arial, sans-serif;
-position: relative;
-padding:1%;
-}
-
-.icon-container {
-position: relative;
-width: 100px;
-height: 100px;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.skill svg {
-position: relative;
-width: 140px;
-height: 140px;
-transform: rotate(90deg);
-}
-
-.skill .icon {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-font-size: 40px;
-color: #888; /* Adjust this value for the desired icon color */
-}
-
-.skill p {
-margin-top: 5px;
-font-size: 14px;
-color: #aaa;
-}
-
-.skill r {
-margin-top: 5px;
-font-size: 14px;
-font-weight: bold;
-color: #ff4800;
-}
-
-.circle-bg {
-fill: none;
-stroke: #333;
-stroke-width: 3.8;
-}
-
-.circle {
-fill: none;
-/*stroke: #ff4500;*/
-stroke:aliceblue;
-stroke-width: 3.8;
-stroke-linecap: round;
-transform: rotate(-90deg);
-transform-origin: center;
-transition: stroke-dasharray 0.3s ease;
-}
-
-/* portfolio section goes here*/
-
-.portfolio {
-    padding: 50px;
-    text-align: center;    
-}
-
-.portfolio-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.web-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.mobile-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
     
-.desktop-cards {
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+    }
+    
+    header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 50px;
+    background-color: #1a1a1a;
+    }
+    
+    header nav {
+    background-color: #333;
+    border: 2px solid #ff4500;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    }
+    
+    nav .nav-item {
+    color: #fff;
+    font-style: normal; /* Changed 'none' to 'normal' for clarity */
+    margin: 0 15px;
+    padding: 10px; /* Padding for better spacing */
+    box-sizing: border-box; /* Ensures padding doesn't affect total size */
+    position: relative; /* Required for relative positioning */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    display: flex; /* Added to align content properly */
+    align-items: center; /* Centers icon and text vertically */
+    justify-content: center; /* Centers content horizontally */
+    
+    }
+    
+    nav .nav-item:hover {
+    background-color: #ff5800; /* Highlight background on hover */
+    font-weight: bold;
+    transform: scale(1.1); /* Slight scaling effect */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    }
+    
+    
+    
+    nav .nav-item span {
+    display: inline-block; /* Ensures proper inline layout */
+    margin-left: 5px; /* Adds spacing between icon and text */
+    
+    }
+    
+    nav .nav-item i {
+    display: none;
+    /**font-size: 1.2rem; /* Adjust icon size for better visibility 
+    width: auto;*/
+    
+    }
+    
+    nav .nav-item:hover i {
+    transform: scale(1.2); /* Slight scaling effect on hover */
+    }
+    
+    .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    }
+    
+    .hero .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap:30vw;
+    }
+    
+    
+    .hero .content {
+    width: 50vh;
+    padding:2%;
+    }
+    
+    
+    .hero p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    }
+    
+    .hero h1 {
+    max-width:100%;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ff4500;
+    }
+
+    .hero h3 {
+    max-width:100%;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff4500;
+    }
+
+    .hero h5 {
+    max-width:100%;
+    font-size: 1.5rem;
+    margin-left:10px;
+    margin-bottom: 20px;
+    color: #888;
+    }
+    
+    
+    .hero .buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    }
+    
+    .hero .buttons a {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 15px;
+    font-weight: bold;
+    }
+    
+    
+    .btn-primary {
+    background-color: #ff4800;
+    color: #fff;
+    }
+    
+    .btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    }
+    
+    .hero .stats {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: #333;
+    padding-left: 40px;
+    padding-right: 40px;
+    clear:both;
+    border-radius: 10px;
+    float:left;
+    }
+    
+    .hero .stats div {
+    text-align: center;
+    padding:30px;
+    }
+    
+    .hero .stats div h3 {
+    font-size: 24px;
+    color: #ff4500;
+    }
+    
+    .hero .stats div p {
+    font-size: 16px;
+    }
+    
+    .services {
+    padding: 50px;
+    text-align: center;
+    
+    }
+    
+    .services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+    }
+    
+    .services p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #aaa;
+    }
+    
+    .service-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-}
-
-.portfolio-card {
+    }
+    
+    .service-card {
     background-color: #222;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-}
-
-.portfolio-card h3 {
+    }
+    
+    .service-card h3 {
     font-size: 20px;
     margin: 20px 0;
     color: #ff4500;
-}
+    }
     
-.portfolio-card p {
+    .service-card p {
     color: #aaa;
-}
-
-.portfolio-card i {
+    }
+    
+    .service-card i {
     font-size: 40px;
     color: #888; /* Adjust this value for the desired icon color */
-}
+    }
+    
+    .about {
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .about h2 {
+    width:100%;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+    }
+    
+    .about p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #aaa;
+    }
+    
+    .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding:5%;
+    }
+    
+    .about-content .image {
+    flex: 1;
+    max-width: 400px;
+    margin: 20px;
+    }
+    
+    .about-content .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:18px;
+    flex: 2;
+    margin: 20px;
+    padding-left:30px;
+    padding-right:30px;
+    }
+    
+    .about-content .text p {
+    color: #aaa;
+    font-size:18px;
+    }
+    
+    .download-cv {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ff4500;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    }
+    
+    .skill-section {
+    padding: 50px;
+    background-color: #1a1a1a;
+    }
+    
+    .skill-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 30px;
+    }
+    
+    .skill-container {
+    display: flex;
+    flex-wrap:wrap;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    }
+    
+    .skill {
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    position: relative;
+    padding:1%;
+    }
+    
+    .icon-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .skill svg {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    transform: rotate(90deg);
+    }
+    
+    .skill .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #888; /* Adjust this value for the desired icon color */
+    }
+    
+    .skill p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #aaa;
+    }
+    
+    .skill r {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff4800;
+    }
+    
+    .circle-bg {
+    fill: none;
+    stroke: #333;
+    stroke-width: 3.8;
+    }
+    
+    .circle {
+    fill: none;
+    stroke: #ff4500;
+    stroke-width: 3.8;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: stroke-dasharray 0.3s ease;
+    }
+    
+    .portfolio {
+    padding: 50px;
+    text-align: center;    
+    }
+    
+    .portfolio-buttons {
+    
+    margin:20px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    }
+    
+    .portfolio-button {
+    padding: 10px;
+    font-size:15px;
+    background-color: #1a1a1a;
+    /*color:#ff4500;*/
+    color:#fff;
+    border-radius:10px;
+    }
+    
+    .portfolio-button:hover{
+    background-color: #ff5800;
+    transition: background-color 0.3s ease;
+    cursor:pointer;
+    }
+    
+    .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 0.7fr));
+    gap: 20px;
+    }
+    
+    .portfolio-card {
+    
+    background-color: #222;
+    padding: 2px;
+    border-radius: 10px;
+    text-align: center; 
+    border: 2px solid #ff4500; /* Corrected border */
+        
+    }
+    
+    .portfolio-card .imgbox {
+    width: 100%;
+    height: auto; /* 700px Define height */
+    border-radius: 10px;
+    overflow: hidden; /* Ensure image doesn't overflow */
+    position: relative; /* Position for the hover effect */
+    }
+    
+    .portfolio-card .imgbox img {
+    width: 100%; 
+    height: 100%; 
+    object-fit:cover; 
+    /*object-position: 50% 90%;
+    border-radius: 10px;*/
+    transition: 0.5s ease-in-out; 
+    }
+    
+    .portfolio-card .imgbox::after {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    border: 2px solid white; /* Border color */
+    border-radius: 10px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.4s ease-in-out, inset 0.4s ease-in-out; /* Transition for opacity and inset */
+    }
+    
+    .portfolio-card:hover .imgbox::after {
+    opacity: 1; 
+    inset: 10px; /* Create a border effect by adjusting inset */
+    }
+    
+    .portfolio-card:hover .imgbox img {
+    filter: grayscale(1) brightness(0.4);
+    }
+    
+    
+    .portfolio-card .content {
+    position: absolute; /* Position the content absolutely */
+    top: 50%; /* Center the content vertically */
+    left: 50%; /* Center the content horizontally */
+    transform: translate(-50%, -50%); /* Adjust the content position */
+    text-align: center; /* Center the content horizontally */
+    color: #FFFFFF; /* Content color (white in this case) */
+    font-size: 20px;
+    opacity: 0; /* Initially hide the content */
+    transition: opacity 0.4s ease-in-out; /* Transition for opacity */
+    }
+    
+    .portfolio-card:hover .content {
+    opacity: 1; /* Show the content on hover */
+    pointer-events: auto; /* Allow interaction */
+    }
+    
+    .portfolio-card:hover .content p {
+    font-size:10px;
+    opacity: 1; 
+    transform: translateY(0);
+    }
+    
+    .portfolio h2 {
+    width:100%;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+    }
+    
+    .portfolio-card h3 {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #ff4500;
+    }
+    
+    .portfolio p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #aaa;
+    }
+    
+    
+    .portfolio-card p {
+    color: #ff4500;
+    font-weight: bold;
+    margin-bottom: 10px;
+    }
+    
+    .portfolio-card .textdetails{
+    max-width: 100%;
+    padding:1px;
+    font-size:13px;
+    }
 
-@media (max-width: 768px) {
+
+    /*.portfolio-card .icons a {
+    text-decoration: none; /* Remove underline 
+    color: white; /* Default text color 
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    pointer-events: auto; /* Ensure the links are clickable 
+    }
+    
+    .portfolio-card .icons a:hover {
+    color: #ff4500;
+    }
+    
+    .portfolio-card .icons a:hover i {
+    transform: scale(1.2);
+    color: #ff4500;
+    }*/
+    
+    .p_icons {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    gap:20px;
+    }
+    
+    .p_icons i {
+    text-decoration:none;
+    font-size: 24px;
+    margin:10px;
+    color: #888;
+    transition: transform 0.3s ease;
+    }
+    
+    .p_icons i:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    }
+
+    .p_icons .description {
+    color: #aaa;
+    font-size: 1px;
+    
+    }
+        
+    
+    /*.portfolio-card i {
+    font-size: 40px;
+    color: #888; /* Adjust this value for the desired icon color /
+    }*/
+    
+    .contact {
+    padding: 50px;
+    text-align: center;
+    }
+    
+    .contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+    }
+    
+    .contact-form {
+    background-color: #222;
+    border-radius:10px;
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+    max-width: 500px;
+    margin: 0 auto;
+    }
+    
+    .contact p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #aaa;
+    }
+    
+    .contact-form label {
+    font-size: 15px;
+    color: #fff;
+    }
+    
+    .contact-form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #888;
+    /*border: 1px solid #ff4500;*/
+    }
+    
+    .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #888;
+    /*border: 1px solid #ff4500;*/
+    }
+    
+    .contact-form button {
+    font-size:18px;
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    }
+    
+    .contact-form button:hover {
+    transform: scale(1.2);
+    }
+
+     
+    
+    footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #ff4500;
+    color: #fff;
+    font-size: 20px;
+    }
+    
+    footer footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    }
+    
+    .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+    }
+    
+    .social-icons i {
+    font-size: 24px;
+    color: #fff;
+    transition: transform 0.3s ease;
+    }
+    
+    .social-icons i:hover {
+    transform: scale(1.2);
+    
+    }
+    
+    @media (max-width: 768px) {
     nav .nav-item {
         padding: 5px; /* Reduce padding on smaller screens */
         justify-content: center; /* Center content */
     }
-
+    
     nav .nav-item span {
         display: none; /* Hide text on smaller screens */
     }
-
+    
     nav .nav-item i {
         font-size: 1.5rem; /* Increase icon size for better visibility */
         display: inline-block; /* Ensure icons remain visible */
         transition: transform 0.3s ease, font-size 0.3s ease; /* Smooth hover effect */
     }
-
+    
     .hero {
         flex-direction: column;
     }
-
-
+    
+    
     .hero h1 {
         font-size: 32px;
     }
-
+    
     .hero p {
         font-size: 16px;
     }
-
+    
     .hero .container{
         flex-direction: column;
     }
-
+    
     .hero .container .content{
         order: 2;
     }
-
+    
     .about-content {
         flex-direction: column;
         text-align: center;
     }
-
+    
     .about-content .text {
     font-size:18px;
     flex: 2;
@@ -451,21 +720,27 @@ transition: stroke-dasharray 0.3s ease;
     padding-left:10px;
     padding-right:10px;
     }
-
+    
     .about-content .text p {
     color: #aaa;
     font-size:18px;
     }
-
+    
     .stats div h3 {
         font-size: 20px;
     }
-
+    
     .stats div p {
         font-size: 14px;
     }
-
+    
     .skill-card h3 {
         font-size: 16px;
     }
-}
+    
+    .portfolio-card p{
+        font-size:16px;
+    }
+    }
+    
+    
