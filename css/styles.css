@@ -561,7 +561,67 @@
     
     }
         
+
+    .recommendations {
+    text-align: center;;
+    padding:40px;
+    }
+
+    .recommendations h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    .recommendations p {
+        margin-bottom: 20px;
+        font-size: 18px;
+        color: #aaa;
+        }
+
+    .holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    gap: 20px;
+    padding: 0px;
+    text-align:left;
     
+    }
+    
+    .recommendations .recommendation-card {
+        background-color: #222;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .recommendation-card .heading {
+        font-size: 25px;
+        font-weight: bold;
+        color: #ff4500;
+        /*color: #;*/
+        margin:5px;
+    }
+
+    .heading i {
+        font-size: 25px;
+        color: #888;
+        margin:5px;
+    }
+
+    .recommendation-card .bio{
+        font-size: 16px;
+        color: #aaa;
+        margin:5px;
+    }
+
+    .recommendation-card .text{
+        font-size: 18px;
+        color: #fff;
+        margin:5px;
+    }
     /*.portfolio-card i {
     font-size: 40px;
     color: #888; /* Adjust this value for the desired icon color /

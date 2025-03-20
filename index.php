@@ -612,6 +612,70 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
     <section class="recommendations" id="recommendations">
+        <h2>Recommendations</h2>
+        <hr>
+        <br>
+        <p>
+            These are some of the recommendations i have received from my colleagues and clients. 
+            I have worked with multiple people and have always delivered the best quality work.
+        </p>
+        <br>
+    
+        <div class="holder">
+            <div class="recommendation-card">
+                <div class="heading">
+                    Muhammad Romail Imran <a href="https://www.linkedin.com/in/muhammad-romail-imran-96b13818b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="bio">
+                    x SLB | Pursuing Bachelors in Artificial Intelligence | x Broadstone Technologies | WeAlif | GIKI'25
+                </div>
+                <div class="text">
+                Abbas worked as an intern under my supervision at WeAlif, where he developed strong skills in research, 
+                data consulting, and converting data into media for digital marketing purposes. He quickly learned how 
+                to collect and analyze complex data, using clear methods to find useful insights. His adaptability, 
+                attention to detail, and eagerness to learn helped him deliver results that supported important decisions 
+                and enhanced marketing efforts. Abbas' dedication and ability to learn quickly make him a valuable 
+                addition to any team.
+                </div>
+            </div>
+
+            <div class="recommendation-card">
+                <div class="heading">
+                    Georgi Stoyanov <a href="https://www.linkedin.com/in/georgi-stoyanov-714935315/" target="_blank"><i class="fab fa-linkedin"></i> </a>
+                </div>
+                <div class="bio">
+                    C | C++ | Python Developer
+                </div>
+                <div class="text">
+                    Abbas is a hardworking student who wants to realize his dreams in the industry. He's a reliable person 
+                    and eager to learn a lot. Don't miss the opportunity and get yourself an efficient employee
+                </div>
+            </div>
+            <div class="recommendation-card">
+                <div class="heading">
+                    Muhammad Usman <a href="https://www.linkedin.com/in/muhammad-usman-a8b8311a0/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="bio">
+                    Frontend Developer | UI Specialist | React.js Expert at CodesOrbit (Pvt) Ltd
+                </div>
+                <div class="text">
+                Ex[c]ited to recommend Abbas, a mobile app developer with a passion for crafting user-friendly and 
+                high-performance applications. Their dedication to learning and delivering quality solutions is truly commendable.
+                </div>
+            </div>
+            <div class="recommendation-card">
+                <div class="heading">
+                    Sheikh Basim <a href="https://www.linkedin.com/in/sheikh-basim-38ba52278/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="bio">
+                    Cyber Security Enthusiasts & Researcher | CCNA | EDR/XDR |
+                </div>
+                <div class="text">
+                I would highly recommend Abbas khan for any kind of Mob app development. 
+                their expertise in React and Laravel are outstanding and he is a proactive learner and dedicated professional.
+                </div>
+            </div>
+        </div>
         
     </section>
 
