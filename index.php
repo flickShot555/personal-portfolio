@@ -435,23 +435,18 @@
             right: 0; 
             bottom: 0; 
             border: 2px solid white; /* Border color */
-            border-radius: 25px;
+            border-radius: 10px;
             opacity: 0; /* Initially hidden */
             transition: opacity 0.4s ease-in-out, inset 0.4s ease-in-out; /* Transition for opacity and inset */
         }
 
         .portfolio-card:hover .imgbox::after {
             opacity: 1; 
-            inset: 20px; /* Create a border effect by adjusting inset */
+            inset: 10px; /* Create a border effect by adjusting inset */
         }
 
         .portfolio-card:hover .imgbox img {
             filter: grayscale(1) brightness(0.4);
-        }
-
-        .portfolio-card:hover .content p {
-            opacity: 1; 
-            transform: translateY(0);
         }
 
 
@@ -462,13 +457,20 @@
             transform: translate(-50%, -50%); /* Adjust the content position */
             text-align: center; /* Center the content horizontally */
             color: #FFFFFF; /* Content color (white in this case) */
-            font-size: 50px;
+            font-size: 20px;
             opacity: 0; /* Initially hide the content */
             transition: opacity 0.4s ease-in-out; /* Transition for opacity */
         }
 
         .portfolio-card:hover .content {
             opacity: 1; /* Show the content on hover */
+            pointer-events: auto; /* Allow interaction */
+        }
+
+        .portfolio-card:hover .content p {
+            font-size:10px;
+            opacity: 1; 
+            transform: translateY(0);
         }
 
         .portfolio h2 {
@@ -497,10 +499,59 @@
             margin-bottom: 10px;
         }
 
-        .portfolio-card i {
-            font-size: 40px;
-            color: #888; /* Adjust this value for the desired icon color */
+        .portfolio-card .textdetails{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
+
+        .portfolio-card .icons a {
+            text-decoration: none; /* Remove underline */
+            color: white; /* Default text color */
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+            pointer-events: auto; /* Ensure the links are clickable */
+        }
+
+        .portfolio-card .icons a:hover {
+            color: #ff4500;
+        }
+
+        .portfolio-card .icons a:hover i {
+            transform: scale(1.2);
+            color: #ff4500;
+        }
+
+        /*.portfolio-card:hover .p_icons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }*/
+
+        .p_icons i {
+            font-size: 24px;
+            margin:10px;
+            color: #fff;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .p_icons i:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        /*.portfolio-card i {
+            font-size: 40px;
+            color: #888; /* Adjust this value for the desired icon color /
+        }*/
 
         .contact {
             padding: 50px;
@@ -1042,7 +1093,13 @@
                 <div class="imgbox">
                     <img src="./assets/screenshots/web/CampusConnect.png">
                     <div class="content">
-                        other details
+                        <div class="textdetails">
+                            other details
+                            <div class="icons">
+                                <a href="https://www.linkedin.com/in/the-abbas-khan/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i> </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <p>Campus Social Media Website</p>
@@ -1199,7 +1256,7 @@
                 <button type="submit">Send</button>
             </form>
 
-            <p id="responseMessage"></p>    
+            <!--p id="responseMessage"></p-->
     </section>
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
