@@ -252,6 +252,10 @@
         }
 
         .about-content .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             font-size:18px;
             flex: 2;
             margin: 20px;
@@ -397,6 +401,7 @@
         }
         
         .portfolio-card {
+            
             background-color: #222;
             padding: 2px;
             border-radius: 10px;
@@ -410,7 +415,9 @@
         }
 
         .portfolio-card img {
+            /*max-height:50vh;*/
             width: 100%;
+            /*width: auto;*/
             border-radius: 10px;
             fit: cover;
         }
@@ -444,6 +451,69 @@
         .portfolio-card i {
             font-size: 40px;
             color: #888; /* Adjust this value for the desired icon color */
+        }
+
+        .contact {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .contact-form {
+            background-color: #222;
+            border-radius:10px;
+            padding: 20px;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #aaa;
+        }
+        
+        .contact-form label {
+            font-size: 15px;
+            color: #fff;
+        }
+
+        .contact-form input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #888;
+            /*border: 1px solid #ff4500;*/
+        }
+
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #888;
+            /*border: 1px solid #ff4500;*/
+        }
+
+        .contact-form button {
+            font-size:18px;
+            padding: 10px 20px;
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
         }
 
         footer{
@@ -546,6 +616,10 @@
             .skill-card h3 {
                 font-size: 16px;
             }
+
+            .portfolio-card p{
+                font-size:16px;
+            }
         }
 
 
@@ -591,6 +665,20 @@
             progressCircle.style.strokeDasharray = circumference;
             progressCircle.style.strokeDashoffset = offset;
         });
+
+        /*document.getElementById("contactForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(this);
+
+            const response = await fetch("send_email.php", {
+            method: "POST",
+            body: formData
+            });
+
+            const result = await response.text();
+            document.getElementById("responseMessage").innerText = result;
+        });*/
     </script>
 
 </head>
@@ -943,7 +1031,7 @@
 
             <div class="portfolio-card" data-category="desktop">
                 <img src="./assets/screenshots/desktop/automobile-sales-management-system.PNG">
-                <p>an automobile sales maagement system</p>
+                <p>an automobile sales management system</p>
             </div>
 
             <div class="portfolio-card" data-category="desktop">
@@ -956,7 +1044,48 @@
                 <p>temprature conversion system</p>
             </div>
 
+            <div class="portfolio-card" data-category="mobile">
+                <img src="./assets/screenshots/mobile/WaterReminderApp.PNG">
+                <p>temprature conversion system</p>
+            </div>
+
+            <div class="portfolio-card" data-category="mobile">
+                <img src="./assets/screenshots/mobile/portfolio.jpg">
+                <p>temprature conversion system</p>
+            </div>
+
         </div>
+    </section>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <section class="contact" id="contact">
+            <h2>Contact Me</h2>
+            <hr>
+            <br>
+            <p>
+                If you have any queries or want to discuss a project, feel free to contact me. I am always available to help you out.
+            </p>
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xeoaeejl" method="POST">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit">Send</button>
+            </form>
+
+            <p id="responseMessage"></p>    
     </section>
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -964,7 +1093,7 @@
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2025 - Abbas Khan</p>
+            <p>&copy; 2025 - Aepostrophee -by Abbas Khan</p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/the-abbas-khan/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.github.com/flickShot555/" target="_blank"><i class="fab fa-github"></i> </a>
