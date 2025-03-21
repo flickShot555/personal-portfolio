@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <title>The Abbas Khan</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://kit.fontawesome.com/6e98f21a5d.js" crossorigin="anonymous"></script>
+    <!--script src="https://kit.fontawesome.com/6e98f21a5d.js" crossorigin="anonymous"></!--script-->
     
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
