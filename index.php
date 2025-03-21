@@ -172,7 +172,7 @@
         <h2>About Me<br><hr></h2>
         <div class="about-content">
             <div class="image">
-                <img src="./assets/pp6.jpg" alt="Abbas Khan" style="width: 100%; border-radius: 10px;">
+                <img src="./assets/pp6.png" alt="Abbas Khan" style="width: 100%; border-radius: 10px;">
             </div>
             <div class="text">
                 <p>I am a dedicated software developer with a strong background in building innovative, scalable solutions. 
